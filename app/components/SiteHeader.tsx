@@ -20,7 +20,6 @@ const navItems: NavItem[] = [
   },
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
-  { label: "Quote", href: "/contact" },
 ];
 
 type SiteHeaderProps = {
@@ -69,15 +68,19 @@ export function SiteHeader({ theme = "light" }: SiteHeaderProps) {
                 {item.label}
               </Link>
               {item.children ? (
-                <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 pt-4 opacity-0 transition group-hover:visible group-hover:opacity-100">
-                  <div className="grid gap-1 rounded-2xl border border-slate-200 bg-white p-2 text-slate-700 shadow-[0_20px_60px_rgba(15,23,42,0.15)]">
+                <div className="invisible absolute left-1/2 top-full w-80 -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition duration-200 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 p-2 text-white shadow-[0_24px_70px_rgba(15,23,42,0.22)]">
+                    <div className="absolute inset-x-6 top-4 h-px bg-gradient-to-r from-transparent via-blue-300/60 to-transparent" />
                     {item.children.map((child) => (
                       <Link
-                        className="rounded-xl px-4 py-3 text-sm font-semibold transition hover:bg-blue-50 hover:text-blue-700"
+                        className="group/item grid rounded-xl px-4 py-3 text-sm font-semibold transition hover:bg-white/10"
                         href={child.href}
                         key={child.href}
                       >
-                        {child.label}
+                        <span>{child.label}</span>
+                        <span className="mt-1 text-xs font-medium text-slate-400 transition group-hover/item:text-blue-200">
+                          View capabilities and projects
+                        </span>
                       </Link>
                     ))}
                   </div>
@@ -87,16 +90,25 @@ export function SiteHeader({ theme = "light" }: SiteHeaderProps) {
           ))}
         </div>
 
-        <Link
-          href="/contact"
-          className={`hidden rounded-full px-4 py-2 text-[0.78rem] font-semibold shadow-sm transition sm:inline-flex ${
-            isGreen
-              ? "bg-emerald-950 text-white hover:bg-emerald-800"
-              : "bg-slate-950 text-white hover:bg-blue-700"
-          }`}
-        >
-          Request a quote
-        </Link>
+        <div className="hidden items-center gap-4 sm:flex">
+          <Link
+            href="/contact"
+            className={`inline-flex items-center gap-3 rounded-lg px-5 py-3 text-sm font-semibold shadow-sm transition ${
+              isGreen
+                ? "bg-emerald-950 text-white hover:bg-emerald-800"
+                : "bg-slate-950 text-white hover:bg-blue-700"
+            }`}
+          >
+            Request a free quote
+            <span aria-hidden>›</span>
+          </Link>
+          <Link
+            href="/contact"
+            className="text-sm font-medium text-slate-500 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-950"
+          >
+            Contact us
+          </Link>
+        </div>
       </div>
     </nav>
   );
