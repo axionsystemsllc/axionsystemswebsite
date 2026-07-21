@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #020617;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #bfdbfe;
+  color: #020617;
+}
+
+.engineering-fixed-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(37, 99, 235, 0.12), transparent 30%),
+    radial-gradient(circle at 82% 28%, rgba(14, 165, 233, 0.1), transparent 28%),
+    radial-gradient(circle at 50% 88%, rgba(15, 23, 42, 0.06), transparent 36%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(241, 245, 249, 0.94));
+}
+
+.engineering-fixed-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background:
+    linear-gradient(to right, rgba(15, 23, 42, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 76px 76px;
+  mask-image: linear-gradient(180deg, transparent, #000 14%, #000 86%, transparent);
+}
+
+.engineering-fixed-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.36;
+  background:
+    linear-gradient(135deg, transparent 0 18%, rgba(37, 99, 235, 0.32) 18.2%, transparent 18.6% 100%),
+    linear-gradient(135deg, transparent 0 62%, rgba(14, 165, 233, 0.22) 62.2%, transparent 62.5% 100%),
+    radial-gradient(circle at 26% 34%, rgba(37, 99, 235, 0.32) 0 3px, transparent 4px),
+    radial-gradient(circle at 74% 64%, rgba(14, 165, 233, 0.28) 0 4px, transparent 5px);
+}
+
+.tech-visual {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.32), transparent 28%),
+    radial-gradient(circle at 80% 72%, rgba(14, 165, 233, 0.24), transparent 30%),
+    linear-gradient(135deg, #f8fafc 0%, #eaf1ff 42%, #08111f 100%);
+}
+
+.tech-visual::before,
+.tech-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.tech-visual::before {
+  opacity: 0.72;
+  background:
+    linear-gradient(to right, rgba(15, 23, 42, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.12) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(135deg, #000, transparent 82%);
+}
+
+.tech-visual::after {
+  inset: 10%;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 28px;
+  background:
+    linear-gradient(90deg, transparent 0%, transparent 18%, rgba(37, 99, 235, 0.64) 18%, rgba(37, 99, 235, 0.64) 20%, transparent 20%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, transparent 38%, rgba(255, 255, 255, 0.38) 38%, rgba(255, 255, 255, 0.38) 40%, transparent 40%, transparent 100%),
+    radial-gradient(circle at 28% 46%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 7px, transparent 8px),
+    radial-gradient(circle at 62% 35%, rgba(59, 130, 246, 0.95) 0%, rgba(59, 130, 246, 0.95) 5px, transparent 6px),
+    radial-gradient(circle at 72% 62%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 6px, transparent 7px);
+  box-shadow: inset 0 0 70px rgba(255, 255, 255, 0.14);
+}
+
+.tech-visual-hero::after {
+  inset: 8%;
+  background:
+    linear-gradient(135deg, transparent 0%, transparent 42%, rgba(37, 99, 235, 0.70) 42%, rgba(37, 99, 235, 0.70) 45%, transparent 45%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, transparent 28%, rgba(255, 255, 255, 0.74) 28%, rgba(255, 255, 255, 0.74) 30%, transparent 30%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, transparent 55%, rgba(255, 255, 255, 0.42) 55%, rgba(255, 255, 255, 0.42) 57%, transparent 57%, transparent 100%),
+    radial-gradient(circle at 25% 32%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 10px, transparent 11px),
+    radial-gradient(circle at 66% 52%, rgba(96, 165, 250, 0.95) 0%, rgba(96, 165, 250, 0.95) 9px, transparent 10px);
+}
+
+.tech-visual-board {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(37, 99, 235, 0.28), transparent 25%),
+    linear-gradient(135deg, #f8fafc 0%, #dbeafe 45%, #0f172a 100%);
+}
+
+.tech-visual-avionics {
+  background:
+    radial-gradient(circle at 70% 20%, rgba(14, 165, 233, 0.28), transparent 26%),
+    linear-gradient(135deg, #ffffff 0%, #e0f2fe 38%, #020617 100%);
+}
+
+.tech-visual-drone {
+  background:
+    radial-gradient(circle at 22% 75%, rgba(59, 130, 246, 0.34), transparent 30%),
+    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 44%, #111827 100%);
+}
+
+.tech-visual-compute {
+  background:
+    radial-gradient(circle at 76% 30%, rgba(29, 78, 216, 0.34), transparent 28%),
+    linear-gradient(135deg, #f9fafb 0%, #dbeafe 42%, #0a1020 100%);
+}
+
+.tech-visual-workspace {
+  background:
+    radial-gradient(circle at 25% 26%, rgba(96, 165, 250, 0.32), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #eef2ff 42%, #061225 100%);
+}
+
+.green-particles::before,
+.green-particles::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.green-particles::before {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 2px, transparent 3px),
+    radial-gradient(circle, rgba(16, 185, 129, 0.26) 0%, rgba(16, 185, 129, 0.26) 3px, transparent 4px);
+  background-position: 0 0, 34px 46px;
+  background-size: 92px 92px, 128px 128px;
+  opacity: 0.72;
+  animation: particle-drift 24s linear infinite;
+}
+
+.green-particles::after {
+  background:
+    radial-gradient(circle at 16% 28%, rgba(255, 255, 255, 0.74) 0%, rgba(255, 255, 255, 0.74) 4px, transparent 5px),
+    radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 5px, transparent 6px),
+    radial-gradient(circle at 82% 76%, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0.58) 4px, transparent 5px),
+    radial-gradient(circle at 35% 82%, rgba(16, 185, 129, 0.3) 0%, rgba(16, 185, 129, 0.3) 7px, transparent 8px);
+  animation: particle-float 12s ease-in-out infinite alternate;
+}
+
+@keyframes particle-drift {
+  to {
+    background-position: 92px 92px, 162px 174px;
+  }
+}
+
+@keyframes particle-float {
+  to {
+    transform: translateY(-18px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .green-particles::before,
+  .green-particles::after {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
