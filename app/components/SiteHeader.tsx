@@ -18,6 +18,7 @@ const navItems: NavItem[] = [
       { label: "Axion AI", href: "/axion-ai" },
     ],
   },
+  { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
 ];

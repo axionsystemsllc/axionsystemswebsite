@@ -73,12 +73,30 @@ const divisions = [
 ];
 
 const industries = [
-  "Manufacturing teams",
-  "Local businesses",
-  "Startup prototypes",
-  "Industrial electronics",
-  "Robotics projects",
-  "AI-enabled operations",
+  {
+    title: "Manufacturing teams",
+    image: "/images/services/product-integration-service.jpg",
+  },
+  {
+    title: "Local business operations",
+    image: "/images/services/technical-software-service.jpg",
+  },
+  {
+    title: "Startup prototypes",
+    image: "/images/real-projects/scratch-drone-prototype.jpg",
+  },
+  {
+    title: "Industrial electronics",
+    image: "/images/real-projects/tank-vision-enclosure.jpg",
+  },
+  {
+    title: "Robotics projects",
+    image: "/images/drone-controls.png",
+  },
+  {
+    title: "AI-enabled workflows",
+    image: "/images/ai-workspace.png",
+  },
 ];
 
 const stats = [
@@ -129,7 +147,7 @@ export default function Home() {
       <SiteHeader />
 
       <section className="relative isolate overflow-hidden bg-slate-950 text-white">
-        <div className="absolute inset-0 -z-20">
+        <div className="hero-motion absolute inset-0 -z-20">
           <Image
             src="/images/hero-realistic-lab.png"
             alt="Axion engineering lab with electronics and prototyping tools"
@@ -141,20 +159,20 @@ export default function Home() {
         </div>
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/76 to-slate-950/20" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-slate-950 to-transparent" />
+        <div aria-hidden className="hero-geometry" />
 
-        <div className="mx-auto grid min-h-[88vh] max-w-7xl items-center gap-10 px-5 py-16 sm:px-6 lg:grid-cols-[1fr_0.72fr] lg:px-8">
-          <div>
+        <div className="mx-auto flex min-h-[88vh] max-w-7xl items-center px-5 py-16 sm:px-6 lg:px-8">
+          <div className="max-w-5xl">
             <p className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue-200">
               <span className="h-px w-10 bg-blue-300" />
-              Local engineering, AI, and prototype execution
+              Axion Systems
             </p>
-            <h1 className="max-w-5xl text-6xl font-semibold tracking-tight sm:text-7xl lg:text-8xl">
-              We turn technical ideas into working systems.
+            <h1 className="max-w-5xl text-6xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
+              Where ideas become innovation.
             </h1>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-200">
-              Axion Systems designs, automates, fabricates, and prototypes
-              across AI, electronics, manufacturing, robotics, software, and
-              hardware.
+            <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-200 sm:text-2xl">
+              We utilize AI with human review to design, build, and scale
+              technology solutions that move your business forward.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <PrimaryLink href="/contact" light>
@@ -166,26 +184,6 @@ export default function Home() {
               >
                 View capabilities
               </Link>
-            </div>
-          </div>
-
-          <div className="hidden rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 shadow-[0_28px_90px_rgba(0,0,0,0.28)] backdrop-blur-md lg:block">
-            <div className="grid gap-3">
-              {[
-                "Immediate communication",
-                "Small specialized team",
-                "AI-assisted design",
-                "Expert human review",
-                "Prototype-first delivery",
-              ].map((item, index) => (
-                <div
-                  className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.065] px-4 py-4 text-sm font-semibold text-slate-200"
-                  key={item}
-                >
-                  <span>{item}</span>
-                  <span className="font-mono text-blue-200">0{index + 1}</span>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -219,9 +217,9 @@ export default function Home() {
               Where AI speed meets engineering judgment.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              We use AI to accelerate research, modeling, drafting, analysis,
-              and iteration. Then we apply human review, local communication,
-              and hands-on technical execution before the work moves forward.
+              We use AI to accelerate exploration, design, and documentation,
+              then apply technical review and hands-on execution before work
+              becomes production intent.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <PrimaryLink href="/about">Meet the team</PrimaryLink>
@@ -249,7 +247,7 @@ export default function Home() {
                 Our services
               </p>
               <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-                We expand your technical capabilities.
+                Engineering, AI, and prototype support in one place.
               </h2>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -363,22 +361,31 @@ export default function Home() {
                 Markets and applications
               </p>
               <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-                Support for the teams building, repairing, automating, and
-                scaling technical work.
+                Built for teams that need technical progress without slow
+                handoffs.
               </h2>
             </div>
-            <TextLink href="/services">Explore capabilities</TextLink>
+            <TextLink href="/industries">View industries</TextLink>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
-              <div
-                className="group flex min-h-36 items-end rounded-[1.35rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition hover:-translate-y-1 hover:bg-slate-950 hover:text-white"
-                key={industry}
+              <Link
+                className="group relative flex min-h-56 items-end overflow-hidden rounded-[1.35rem] border border-slate-200 bg-slate-950 p-6 text-white shadow-[0_14px_40px_rgba(15,23,42,0.12)] transition hover:-translate-y-1"
+                href="/industries"
+                key={industry.title}
               >
+                <Image
+                  src={industry.image}
+                  alt={industry.title}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 33vw"
+                  className="absolute inset-0 -z-20 object-cover opacity-72 transition duration-700 group-hover:scale-[1.04]"
+                />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-slate-950 via-slate-950/28 to-transparent" />
                 <h3 className="text-2xl font-semibold tracking-tight">
-                  {industry}
+                  {industry.title}
                 </h3>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -186,6 +186,44 @@ html {
   animation-range: entry 12% cover 34%;
 }
 
+.hero-motion img {
+  animation: hero-pan 18s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.hero-geometry {
+  position: absolute;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+}
+
+.hero-geometry::before,
+.hero-geometry::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transform: skewX(-18deg);
+}
+
+.hero-geometry::before {
+  right: 8%;
+  top: 18%;
+  width: 34vw;
+  height: 42vh;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), transparent 58%);
+  animation: geometry-drift 12s ease-in-out infinite alternate;
+}
+
+.hero-geometry::after {
+  right: -8%;
+  bottom: 10%;
+  width: 40vw;
+  height: 24vh;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 62%);
+  animation: geometry-drift 14s ease-in-out infinite alternate-reverse;
+}
+
 @keyframes section-rise {
   from {
     opacity: 0.72;
@@ -198,6 +236,28 @@ html {
   }
 }
 
+@keyframes hero-pan {
+  from {
+    transform: scale(1.02) translate3d(-1.2%, 0, 0);
+  }
+
+  to {
+    transform: scale(1.1) translate3d(1.2%, -1%, 0);
+  }
+}
+
+@keyframes geometry-drift {
+  from {
+    opacity: 0.5;
+    transform: translateY(0) skewX(-18deg);
+  }
+
+  to {
+    opacity: 0.9;
+    transform: translateY(-22px) skewX(-18deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -205,7 +265,10 @@ html {
 
   .green-particles::before,
   .green-particles::after,
-  .scroll-reveal {
+  .scroll-reveal,
+  .hero-motion img,
+  .hero-geometry::before,
+  .hero-geometry::after {
     animation: none;
     opacity: 1;
     transform: none;
