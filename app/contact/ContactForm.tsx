@@ -3,11 +3,12 @@
 import { FormEvent, useState } from "react";
 
 const projectTypes = [
-  "Embedded systems development",
-  "Legacy PCB redesign",
-  "Hardware bring-up and debugging",
-  "Technical software or AI tools",
-  "Technical documentation",
+  "Manufacturing or prototype quote",
+  "PCB, electrical, or hardware design",
+  "Business AI solution",
+  "Embedded AI or robotics",
+  "Modeling, design, or documentation",
+  "Not sure yet",
 ];
 
 export function ContactForm() {
@@ -130,7 +131,7 @@ export function ContactForm() {
           disabled={status === "sending"}
           type="submit"
         >
-          {status === "sending" ? "Sending..." : "Send message"}
+          {status === "sending" ? "Sending..." : "Request free quote"}
         </button>
 
         {status === "sent" ? (

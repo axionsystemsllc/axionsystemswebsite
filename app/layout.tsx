@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Axion Systems | Embedded Systems & Hardware Redesign",
+  title: "Axion Systems | AI, Manufacturing, Electrical & Prototyping",
   description:
-    "Axion Systems helps technical teams modernize electronics, develop embedded systems, and build engineering-focused software and AI tools.",
+    "Axion Systems is the parent company behind Axion Manufacturing, Axion Electrical, and Axion AI, helping teams prototype, design, automate, and build faster.",
 };
 
 export default function RootLayout({

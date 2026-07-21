@@ -3,9 +3,9 @@ import { SiteHeader } from "../components/SiteHeader";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Axion Systems",
+  title: "Contact & Quote | Axion Systems",
   description:
-    "Contact Axion Systems for embedded systems, legacy hardware redesign, technical software, and engineering AI tools.",
+    "Contact Axion Systems for a free quote across manufacturing, electrical design, business AI, embedded AI, robotics, and prototyping.",
 };
 
 export default function ContactPage() {
@@ -20,14 +20,15 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1fr]">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
-              Contact
+              Contact and quote
             </p>
             <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-              Tell us what you are building or modernizing.
+              Ask for a free quote or a practical next step.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Use the form for embedded systems, PCB redesign, bring-up,
-              technical software, AI tooling, or documentation work.
+              Use the form for manufacturing, electrical design, PCB and
+              hardware work, business AI, embedded AI, robotics, modeling, or
+              prototype support.
             </p>
             <p className="mt-8 text-sm font-medium text-slate-600">
               Direct email:{" "}

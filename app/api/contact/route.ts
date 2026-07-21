@@ -91,7 +91,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const subject = `New Axion Systems inquiry: ${projectType || "General project"}`;
+  const subject = `New Axion Systems quote request: ${projectType || "General project"}`;
   const text = [
     `Name: ${name}`,
     `Email: ${email}`,
@@ -105,7 +105,7 @@ export async function POST(request: Request) {
 
   const html = `
     <div style="font-family:Arial,sans-serif;line-height:1.6;color:#0f172a">
-      <h1 style="font-size:20px;margin:0 0 16px">New Axion Systems inquiry</h1>
+      <h1 style="font-size:20px;margin:0 0 16px">New Axion Systems quote request</h1>
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       ${company ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>` : ""}

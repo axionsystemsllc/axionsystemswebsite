@@ -1,12 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const navItems = [
+type NavItem = {
+  children?: { label: string; href: string }[];
+  href: string;
+  label: string;
+};
+
+const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
+  {
+    label: "Services",
+    href: "/services",
+    children: [
+      { label: "Axion Manufacturing", href: "/axion-manufacturing" },
+      { label: "Axion Electrical", href: "/axion-electrical" },
+      { label: "Axion AI", href: "/axion-ai" },
+    ],
+  },
+  { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
-  { label: "Enginuity", href: "/enginuity" },
-  { label: "Contact", href: "/contact" },
+  { label: "Quote", href: "/contact" },
 ];
 
 type SiteHeaderProps = {
@@ -45,15 +59,31 @@ export function SiteHeader({ theme = "light" }: SiteHeaderProps) {
 
         <div className="hidden items-center gap-7 text-[0.82rem] font-medium text-slate-600 md:flex">
           {navItems.map((item) => (
-            <Link
-              className={`transition ${
-                isGreen ? "hover:text-emerald-800" : "hover:text-blue-700"
-              }`}
-              href={item.href}
-              key={item.href}
-            >
-              {item.label}
-            </Link>
+            <div className="group relative" key={item.href}>
+              <Link
+                className={`transition ${
+                  isGreen ? "hover:text-emerald-800" : "hover:text-blue-700"
+                }`}
+                href={item.href}
+              >
+                {item.label}
+              </Link>
+              {item.children ? (
+                <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 pt-4 opacity-0 transition group-hover:visible group-hover:opacity-100">
+                  <div className="grid gap-1 rounded-2xl border border-slate-200 bg-white p-2 text-slate-700 shadow-[0_20px_60px_rgba(15,23,42,0.15)]">
+                    {item.children.map((child) => (
+                      <Link
+                        className="rounded-xl px-4 py-3 text-sm font-semibold transition hover:bg-blue-50 hover:text-blue-700"
+                        href={child.href}
+                        key={child.href}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </div>
           ))}
         </div>
 
@@ -65,7 +95,7 @@ export function SiteHeader({ theme = "light" }: SiteHeaderProps) {
               : "bg-slate-950 text-white hover:bg-blue-700"
           }`}
         >
-          Start a conversation
+          Request a quote
         </Link>
       </div>
     </nav>

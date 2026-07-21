@@ -6,52 +6,37 @@ import { SiteHeader } from "../components/SiteHeader";
 export const metadata: Metadata = {
   title: "Services | Axion Systems",
   description:
-    "Axion Systems provides embedded systems development, legacy PCB redesign, hardware bring-up, technical software, AI tools, and engineering documentation.",
+    "Axion Systems services across manufacturing, electrical design, business AI, embedded AI, robotics, prototyping, and engineering software.",
 };
 
-const services = [
+const divisions = [
   {
-    title: "Embedded Systems Development",
-    text: "Firmware, board-level interfaces, sensor integration, communication links, and hardware-aware software for technical products and prototypes.",
-    image: "/images/services/embedded-systems-service.jpg",
-    points: ["Firmware", "Sensor interfaces", "Control logic"],
-  },
-  {
-    title: "Legacy PCB Redesign",
-    text: "Modernization of aging electronics through schematic review, component replacement, PCB layout updates, and practical redesign paths.",
-    image: "/images/services/legacy-pcb-redesign-service.jpg",
-    points: ["Schematic review", "Board updates", "Manufacturing handoff"],
-  },
-  {
-    title: "Hardware Bring-Up & Debugging",
-    text: "Prototype validation, bench testing, signal checks, power verification, board diagnostics, and clear troubleshooting notes.",
-    image: "/images/services/hardware-bringup-service.jpg",
-    points: ["Power validation", "Signal debugging", "Bench testing"],
-  },
-  {
-    title: "Technical Software & AI Tools",
-    text: "Focused software for engineering workflows, data display, hardware communication, technical automation, and practical AI-assisted tooling.",
-    image: "/images/services/technical-software-service.jpg",
-    points: ["Dashboards", "Automation", "AI workflows"],
-  },
-  {
-    title: "Product Electronics & Integration",
-    text: "Electronics packaging, enclosure-aware PCB design, connector planning, internal layout, and field product integration.",
+    title: "Axion Manufacturing",
+    href: "/axion-manufacturing",
     image: "/images/services/product-integration-service.jpg",
-    points: ["Enclosure fit", "Connector planning", "Packaging"],
+    text: "Prototype fabrication, modeling, short-run production support, fixtures, housings, and design-for-manufacturing review.",
+    points: ["Prototypes", "Modeling", "Short-run support"],
   },
   {
-    title: "Technical Documentation",
-    text: "Engineering artifacts for review, manufacturing, debugging, maintenance, and technical handoff across hardware and software teams.",
-    image: "/images/services/documentation-service.jpg",
-    points: ["Schematics", "Test notes", "Design handoff"],
+    title: "Axion Electrical",
+    href: "/axion-electrical",
+    image: "/images/services/hardware-bringup-service.jpg",
+    text: "PCB design, hardware redesign, electronics integration, power planning, wiring, bring-up, and electrical troubleshooting.",
+    points: ["PCB design", "Hardware debug", "Integration"],
+  },
+  {
+    title: "Axion AI",
+    href: "/axion-ai",
+    image: "/images/services/technical-software-service.jpg",
+    text: "Business AI tools, embedded AI, robotics support, workflow automation, technical software, and Enginuity Workspace.",
+    points: ["Business AI", "Embedded AI", "Robotics"],
   },
 ];
 
 const workflow = [
-  "Clarify the hardware, software, or documentation gap.",
-  "Define a practical engineering path with visible tradeoffs.",
-  "Build, test, document, and hand off in usable increments.",
+  "Clarify the prototype, system, workflow, or production need.",
+  "Choose the right Axion division or blended technical team.",
+  "Design, review, build, test, and hand off in fast usable increments.",
 ];
 
 export default function ServicesPage() {
@@ -67,14 +52,14 @@ export default function ServicesPage() {
               Services
             </p>
             <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-              Practical engineering support from board to software.
+              Three divisions for fast technical execution.
             </h1>
           </div>
           <div className="grid gap-5">
             <p className="max-w-2xl text-lg leading-8 text-slate-600 lg:ml-auto">
-              Axion Systems helps teams move from technical uncertainty to
-              working hardware, cleaner electronics, better embedded systems,
-              and clearer engineering handoffs.
+              Axion Systems brings manufacturing, electrical design, and AI
+              together for customers who need prototypes, systems, automation,
+              and hardware-aware problem solving without slow handoffs.
             </p>
             <div className="grid gap-3 rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4 sm:grid-cols-3">
               {workflow.map((item, index) => (
@@ -93,34 +78,32 @@ export default function ServicesPage() {
       </section>
 
       <section className="relative z-10 px-5 py-10 sm:px-6 lg:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service, index) => (
-            <article
-              className="group overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white/95 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-sm"
-              key={service.title}
+        <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">
+          {divisions.map((division) => (
+            <Link
+              className="group overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white/95 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.13)]"
+              href={division.href}
+              key={division.title}
             >
-              <div className="relative min-h-[255px] overflow-hidden bg-slate-100">
+              <div className="relative min-h-[275px] overflow-hidden bg-slate-100">
                 <Image
-                  src={service.image}
-                  alt={service.title}
+                  src={division.image}
+                  alt={division.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover transition duration-700 ease-out group-hover:scale-[1.035]"
                 />
               </div>
 
               <div className="p-6">
-                <p className="font-mono text-sm text-blue-700">
-                  0{index + 1}
-                </p>
-                <h2 className="mt-5 text-2xl font-semibold tracking-tight">
-                  {service.title}
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  {division.title}
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-slate-600">
-                  {service.text}
+                  {division.text}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {service.points.map((point) => (
+                  {division.points.map((point) => (
                     <span
                       className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-700"
                       key={point}
@@ -130,30 +113,30 @@ export default function ServicesPage() {
                   ))}
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 
         <div className="mx-auto mt-10 grid max-w-7xl gap-7 rounded-[2rem] bg-slate-950 p-7 text-white sm:p-10 lg:grid-cols-[0.8fr_1fr] lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
-              Engineering-first
+              Free quote
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Support where technical details actually matter.
+              Not sure which division fits? Start with the problem.
             </h2>
           </div>
           <div>
             <p className="text-base leading-8 text-slate-300">
-              Start with the hardware, the failure mode, the product goal, or
-              the workflow that needs to improve. Axion can help shape a
-              realistic next step and execute it cleanly.
+              Describe what you are trying to build, automate, repair,
+              redesign, or prototype. We will route it to the right Axion team
+              and respond with a practical next step.
             </p>
             <Link
               href="/contact"
               className="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-100"
             >
-              Contact Axion
+              Ask for a quote
             </Link>
           </div>
         </div>

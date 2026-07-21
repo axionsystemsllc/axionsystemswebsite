@@ -6,7 +6,7 @@ import { SiteHeader } from "../components/SiteHeader";
 export const metadata: Metadata = {
   title: "Projects | Axion Systems",
   description:
-    "A portfolio view of Axion Systems engineering projects across embedded systems, PCB design, industrial electronics, prototyping, and technical documentation.",
+    "A portfolio view of Axion Systems project areas across manufacturing, electrical design, embedded AI, robotics, prototyping, and technical documentation.",
 };
 
 const projects = [
@@ -64,13 +64,14 @@ export default function ProjectsPage() {
               Portfolio
             </p>
             <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-              Engineering work with real hardware behind it.
+              Project work across hardware, AI, robotics, and prototypes.
             </h1>
           </div>
           <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6 shadow-[0_18px_50px_rgba(15,23,42,0.06)]">
             <p className="text-lg leading-8 text-slate-600">
               A concise portfolio of embedded systems, PCB design, product
-              electronics, prototyping, and technical documentation work.
+              electronics, robotics, AI tooling, prototyping, and technical
+              documentation work.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3 text-sm font-medium text-slate-700 sm:grid-cols-4">
               {["PCB design", "Bring-up", "Embedded", "Integration"].map(
@@ -142,9 +143,9 @@ export default function ProjectsPage() {
             Less portfolio theater. More engineering proof.
           </h2>
           <p className="text-base leading-8 text-slate-300">
-            The page is intentionally fuller now, but still restrained: real
-            project images, compact metadata, and alternating motion without
-            turning the work into a loud marketing grid.
+            Axion is built for proof-oriented work: real images, concrete
+            systems, practical technical details, and prototypes that move the
+            next decision forward.
           </p>
         </div>
       </section>
