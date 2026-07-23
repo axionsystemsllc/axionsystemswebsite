@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { IndustryCarousel } from "./components/IndustryCarousel";
 import { SiteHeader } from "./components/SiteHeader";
 
 const services = [
@@ -16,12 +17,12 @@ const services = [
   {
     title: "PCB & Hardware Design",
     href: "/axion-electrical",
-    image: "/images/projects-polished/tank-vision-pcb-lab.png",
+    image: "/images/generated/electronics-validation-lab.png",
   },
   {
     title: "Manufacturing Support",
     href: "/axion-manufacturing",
-    image: "/images/services/product-integration-service.jpg",
+    image: "/images/generated/manufacturing-cnc.png",
   },
   {
     title: "Rapid Prototyping",
@@ -31,7 +32,7 @@ const services = [
   {
     title: "Robotics & Automation",
     href: "/axion-ai",
-    image: "/images/projects-polished/sensor-turret-lab.png",
+    image: "/images/generated/robotics-automation-cell.png",
   },
   {
     title: "Reverse Engineering",
@@ -52,7 +53,7 @@ const divisions = [
     text: "Axion Manufacturing helps customers move from model, drawing, or rough concept to physical prototype with fast iteration, direct updates, and practical design-for-manufacturing input.",
     href: "/axion-manufacturing",
     cta: "Explore Manufacturing",
-    image: "/images/projects-polished/tank-vision-product-spread.png",
+    image: "/images/generated/manufacturing-cnc.png",
   },
   {
     eyebrow: "Axion AI",
@@ -60,7 +61,7 @@ const divisions = [
     text: "Axion AI builds applied AI systems for business operations and technical products, including automation, embedded intelligence, robotics support, and engineering software.",
     href: "/axion-ai",
     cta: "Explore Axion AI",
-    image: "/images/projects-polished/ground-station-dashboard.png",
+    image: "/images/generated/robotics-automation-cell.png",
   },
   {
     eyebrow: "Axion Electrical",
@@ -68,34 +69,40 @@ const divisions = [
     text: "Axion Electrical supports board design, hardware redesign, wiring, bring-up, troubleshooting, and documentation for products that need reliable electrical execution.",
     href: "/axion-electrical",
     cta: "Explore Electrical",
-    image: "/images/projects-polished/tank-vision-pcb-lab.png",
+    image: "/images/generated/electronics-validation-lab.png",
   },
 ];
 
 const industries = [
   {
-    title: "Manufacturing teams",
-    image: "/images/projects-polished/tank-vision-product-spread.png",
+    title: "Manufacturing Teams",
+    text: "Precision prototyping, fixtures, machining, and fast local iteration.",
+    image: "/images/generated/manufacturing-cnc.png",
   },
   {
-    title: "Local business operations",
+    title: "Business Operations",
+    text: "AI workflows, dashboards, automation, and technical software support.",
     image: "/images/services/technical-software-service.jpg",
   },
   {
-    title: "Startup prototypes",
+    title: "Startup Prototypes",
+    text: "Physical proof-of-concept builds that move quickly toward validation.",
     image: "/images/projects-polished/drone-field-wide.png",
   },
   {
-    title: "Industrial electronics",
-    image: "/images/projects-polished/tank-vision-layout-lab.png",
+    title: "Industrial Electronics",
+    text: "PCB design, bring-up, redesign, field integration, and documentation.",
+    image: "/images/generated/electronics-validation-lab.png",
   },
   {
-    title: "Robotics projects",
-    image: "/images/projects-polished/sensor-turret-lab.png",
+    title: "Robotics Projects",
+    text: "Sensor integration, embedded control, automation, and test rigs.",
+    image: "/images/generated/robotics-automation-cell.png",
   },
   {
-    title: "AI-enabled workflows",
-    image: "/images/ai-workspace.png",
+    title: "Energy and Infrastructure",
+    text: "Industrial monitoring, electrical systems, and applied AI operations.",
+    image: "/images/generated/energy-industrial-systems.png",
   },
 ];
 
@@ -110,15 +117,19 @@ function PrimaryLink({
   children,
   href,
   light = false,
+  accent = false,
 }: {
   children: React.ReactNode;
   href: string;
   light?: boolean;
+  accent?: boolean;
 }) {
   return (
     <Link
       className={`inline-flex items-center gap-3 rounded-lg px-5 py-3 text-sm font-semibold shadow-sm transition hover:-translate-y-0.5 ${
-        light
+        accent
+          ? "bg-yellow-400 text-slate-950 hover:bg-yellow-300"
+          : light
           ? "bg-white text-slate-950 hover:bg-blue-100"
           : "bg-slate-950 text-white hover:bg-blue-700"
       }`}
@@ -149,25 +160,25 @@ export default function Home() {
       <section className="relative isolate overflow-hidden bg-slate-950 text-white">
         <div className="hero-motion absolute inset-0 -z-20">
           <Image
-            src="/images/hero-realistic-lab.png"
-            alt="Axion engineering lab with electronics and prototyping tools"
+            src="/images/generated/hero-cloud-engineering.png"
+            alt="Expansive Axion engineering workspace above the clouds"
             fill
             priority
             sizes="100vw"
             className="object-cover object-center opacity-90"
           />
         </div>
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/76 to-slate-950/20" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/68 to-slate-950/6" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-slate-950 to-transparent" />
         <div aria-hidden className="hero-geometry" />
 
-        <div className="mx-auto flex min-h-[88vh] max-w-7xl items-center px-5 py-16 sm:px-6 lg:px-8">
-          <div className="max-w-5xl">
-            <p className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue-200">
-              <span className="h-px w-10 bg-blue-300" />
+        <div className="mx-auto flex min-h-[94vh] max-w-7xl items-center px-5 pb-20 pt-24 sm:px-6 lg:px-8">
+          <div className="max-w-6xl">
+            <p className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-yellow-300">
+              <span className="h-px w-10 bg-yellow-300" />
               Axion Systems
             </p>
-            <h1 className="max-w-5xl text-6xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
+            <h1 className="max-w-6xl text-7xl font-semibold tracking-tight text-white sm:text-8xl lg:text-[8.8rem] lg:leading-[0.88]">
               Where ideas become innovation.
             </h1>
             <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-200 sm:text-2xl">
@@ -175,7 +186,7 @@ export default function Home() {
               technology solutions that move your business forward.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <PrimaryLink href="/contact" light>
+              <PrimaryLink href="/contact" accent>
                 Request a free quote
               </PrimaryLink>
               <Link
@@ -189,7 +200,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-950 px-5 pb-14 text-white sm:px-6 lg:px-8">
+      <section className="section-slice-dark bg-slate-950 px-5 pb-14 text-white sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-4">
           {stats.map((stat) => (
             <div
@@ -207,14 +218,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="scroll-reveal bg-white px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <section className="scroll-reveal section-angle-light bg-white px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-center">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               How we work
             </p>
             <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-              Where AI speed meets engineering judgment.
+              AI speed with engineering judgment.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
               We use AI to accelerate exploration, design, and documentation,
@@ -229,8 +240,8 @@ export default function Home() {
 
           <div className="relative min-h-[430px] overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
             <Image
-              src="/images/projects-polished/tank-vision-pcb-lab.png"
-              alt="Axion electronics project board"
+              src="/images/generated/electronics-validation-lab.png"
+              alt="Axion electronics validation bench"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -239,7 +250,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="scroll-reveal bg-slate-50 px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <section className="scroll-reveal section-blueprint px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
@@ -353,41 +364,25 @@ export default function Home() {
         );
       })}
 
-      <section className="scroll-reveal bg-slate-50 px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <section className="scroll-reveal bg-slate-100 px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
-                Markets and applications
+                Our industries
               </p>
               <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-                Built for teams that need technical progress without slow
-                handoffs.
+                We support your market with practical engineering expertise.
               </h2>
             </div>
-            <TextLink href="/industries">View industries</TextLink>
+            <div className="flex flex-wrap items-center gap-5">
+              <PrimaryLink href="/industries" accent>
+                View industries
+              </PrimaryLink>
+              <TextLink href="/projects">Explore projects</TextLink>
+            </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {industries.map((industry) => (
-              <Link
-                className="group relative flex min-h-56 items-end overflow-hidden rounded-[1.35rem] border border-slate-200 bg-slate-950 p-6 text-white shadow-[0_14px_40px_rgba(15,23,42,0.12)] transition hover:-translate-y-1"
-                href="/industries"
-                key={industry.title}
-              >
-                <Image
-                  src={industry.image}
-                  alt={industry.title}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 33vw"
-                  className="absolute inset-0 -z-20 object-cover opacity-72 transition duration-700 group-hover:scale-[1.04]"
-                />
-                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-slate-950 via-slate-950/28 to-transparent" />
-                <h3 className="text-2xl font-semibold tracking-tight">
-                  {industry.title}
-                </h3>
-              </Link>
-            ))}
-          </div>
+          <IndustryCarousel slides={industries} />
         </div>
       </section>
 

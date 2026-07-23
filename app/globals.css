@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #020617;
+  --axion-navy: #06162b;
+  --axion-yellow: #facc15;
 }
 
 @theme inline {
@@ -211,7 +213,9 @@ html {
   top: 18%;
   width: 34vw;
   height: 42vh;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), transparent 58%);
+  background:
+    linear-gradient(135deg, rgba(250, 204, 21, 0.12), transparent 24%),
+    linear-gradient(135deg, rgba(59, 130, 246, 0.08), transparent 58%);
   animation: geometry-drift 12s ease-in-out infinite alternate;
 }
 
@@ -222,6 +226,184 @@ html {
   height: 24vh;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 62%);
   animation: geometry-drift 14s ease-in-out infinite alternate-reverse;
+}
+
+.section-slice-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-slice-dark::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 54px;
+  background: white;
+  clip-path: polygon(0 58%, 100% 0, 100% 100%, 0 100%);
+}
+
+.section-angle-light {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-angle-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background:
+    linear-gradient(112deg, transparent 0 60%, rgba(250, 204, 21, 0.22) 60.2%, transparent 60.8% 100%),
+    linear-gradient(112deg, transparent 0 72%, rgba(6, 22, 43, 0.12) 72.2%, transparent 72.7% 100%);
+}
+
+.section-blueprint {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to right, rgba(6, 22, 43, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+  background-size: 82px 82px, 82px 82px, auto;
+}
+
+.section-blueprint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(128deg, transparent 0 18%, rgba(250, 204, 21, 0.2) 18.1%, transparent 18.7% 100%),
+    linear-gradient(128deg, transparent 0 78%, rgba(6, 22, 43, 0.14) 78.1%, transparent 78.6% 100%);
+}
+
+.industry-carousel {
+  position: relative;
+}
+
+.industry-carousel-track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.industry-slide-card {
+  position: relative;
+  isolation: isolate;
+  min-height: 430px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #020617;
+  color: white;
+  box-shadow: 0 22px 70px rgba(6, 22, 43, 0.16);
+  transition:
+    transform 360ms ease,
+    box-shadow 360ms ease,
+    filter 360ms ease;
+}
+
+.industry-slide-card img {
+  transform: scale(1.01);
+  transition: transform 900ms ease;
+}
+
+.industry-slide-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 88px rgba(6, 22, 43, 0.22);
+}
+
+.industry-slide-card:hover img {
+  transform: scale(1.065);
+}
+
+.industry-slide-card.is-featured {
+  min-height: 470px;
+}
+
+.industry-slide-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(2, 6, 23, 0.08) 0%, rgba(2, 6, 23, 0.2) 44%, rgba(2, 6, 23, 0.92) 100%),
+    linear-gradient(90deg, rgba(2, 6, 23, 0.24), transparent 48%);
+}
+
+.industry-slide-kicker {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  z-index: 2;
+  border-bottom: 2px solid var(--axion-yellow);
+  padding-bottom: 4px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.industry-slide-copy {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  display: grid;
+  gap: 10px;
+  padding: 26px;
+}
+
+.industry-slide-copy strong {
+  max-width: 14rem;
+  font-size: 1.45rem;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.industry-slide-copy span {
+  max-width: 18rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.industry-carousel-button {
+  display: grid;
+  height: 44px;
+  width: 44px;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(6, 22, 43, 0.9);
+  color: white;
+  font-weight: 800;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.industry-carousel-button:hover {
+  transform: translateY(-2px);
+  background: var(--axion-yellow);
+  color: #020617;
+}
+
+@media (max-width: 1024px) {
+  .industry-carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+
+  .industry-slide-card {
+    min-width: min(82vw, 420px);
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .industry-slide-card,
+  .industry-slide-card.is-featured {
+    min-height: 360px;
+  }
 }
 
 @keyframes section-rise {

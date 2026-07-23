@@ -13,7 +13,7 @@ const industries = [
   {
     title: "Manufacturing Teams",
     text: "Prototype fixtures, short-run planning, process support, tooling ideas, and practical design-for-manufacturing feedback.",
-    image: "/images/projects-polished/tank-vision-product-spread.png",
+    image: "/images/generated/manufacturing-cnc.png",
   },
   {
     title: "Local Businesses",
@@ -23,12 +23,12 @@ const industries = [
   {
     title: "Industrial Electronics",
     text: "Board updates, enclosure-aware electronics, wiring, integration, troubleshooting, and field-ready documentation.",
-    image: "/images/projects-polished/tank-vision-pcb-lab.png",
+    image: "/images/generated/electronics-validation-lab.png",
   },
   {
     title: "Robotics and Automation",
     text: "Sensor integration, embedded control, autonomy concepts, robotic prototypes, and hardware-aware software.",
-    image: "/images/projects-polished/sensor-turret-lab.png",
+    image: "/images/generated/robotics-automation-cell.png",
   },
   {
     title: "Startup Prototypes",
@@ -38,7 +38,7 @@ const industries = [
   {
     title: "Technical Product Teams",
     text: "PCB work, software tools, AI-enabled systems, hardware revisions, documentation, and focused short-term execution.",
-    image: "/images/projects-polished/ground-station-console.png",
+    image: "/images/generated/energy-industrial-systems.png",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function IndustriesPage() {
 
       <section className="relative isolate overflow-hidden bg-slate-950 px-5 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
         <Image
-          src="/images/hero-lab.png"
+          src="/images/generated/hero-cloud-engineering.png"
           alt="Axion technical work across industries"
           fill
           priority

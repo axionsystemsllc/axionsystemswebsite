@@ -20,7 +20,7 @@ export default function AxionElectricalPage() {
         "Hardware documentation and review",
       ]}
       division="Axion Electrical"
-      heroImage="/images/projects-polished/tank-vision-pcb-lab.png"
+      heroImage="/images/generated/electronics-validation-lab.png"
       intro="Electrical design for boards, systems, and field-ready hardware."
       overview="Axion Electrical supports PCB work, electronics integration, wiring, troubleshooting, and hardware decisions that need a clean path from bench testing to usable product behavior."
       projects={[
@@ -32,7 +32,7 @@ export default function AxionElectricalPage() {
         {
           title: "Industrial product electronics",
           text: "Board-level design, Ethernet-facing hardware, connector access, and enclosure-aware electronics packaging.",
-          image: "/images/projects-polished/tank-vision-pcb-lab.png",
+          image: "/images/generated/electronics-validation-lab.png",
         },
         {
           title: "Schematic and hardware review",
