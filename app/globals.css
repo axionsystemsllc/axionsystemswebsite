@@ -189,7 +189,7 @@ html {
 }
 
 .hero-motion img {
-  animation: hero-pan 18s ease-in-out infinite alternate;
+  animation: hero-pan 22s ease-in-out infinite alternate;
   transform-origin: center;
 }
 
@@ -420,11 +420,11 @@ html {
 
 @keyframes hero-pan {
   from {
-    transform: scale(1.02) translate3d(-1.2%, 0, 0);
+    transform: scale(1.01) translate3d(-0.8%, 0, 0);
   }
 
   to {
-    transform: scale(1.1) translate3d(1.2%, -1%, 0);
+    transform: scale(1.055) translate3d(0.8%, -0.5%, 0);
   }
 }
 

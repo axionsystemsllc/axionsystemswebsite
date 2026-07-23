@@ -50,7 +50,7 @@ export function DivisionPage({
               href="/contact"
               className="mt-8 inline-flex rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
             >
-              Request a quote
+              Innovate with us
             </Link>
           </div>
           <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_rgba(15,23,42,0.12)]">

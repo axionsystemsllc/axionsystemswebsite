@@ -13,7 +13,7 @@ const industries = [
   {
     title: "Manufacturing Teams",
     text: "Prototype fixtures, short-run planning, process support, tooling ideas, and practical design-for-manufacturing feedback.",
-    image: "/images/generated/manufacturing-cnc.png",
+    image: "/images/generated/laser-cutting-metal.png",
   },
   {
     title: "Local Businesses",
@@ -23,7 +23,7 @@ const industries = [
   {
     title: "Industrial Electronics",
     text: "Board updates, enclosure-aware electronics, wiring, integration, troubleshooting, and field-ready documentation.",
-    image: "/images/generated/electronics-validation-lab.png",
+    image: "/images/generated/clean-hardware-bench.png",
   },
   {
     title: "Robotics and Automation",
@@ -50,7 +50,7 @@ export default function IndustriesPage() {
 
       <section className="relative isolate overflow-hidden bg-slate-950 px-5 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
         <Image
-          src="/images/generated/hero-cloud-engineering.png"
+          src="/images/generated/hero-drone-facility.png"
           alt="Axion technical work across industries"
           fill
           priority
@@ -119,7 +119,7 @@ export default function IndustriesPage() {
               href="/contact"
               className="mt-7 inline-flex items-center gap-3 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-100"
             >
-              Request a free quote
+              Innovate with us
               <span aria-hidden>›</span>
             </Link>
           </div>

@@ -100,7 +100,7 @@ export function SiteHeader({ theme = "light" }: SiteHeaderProps) {
                 : "bg-slate-950 text-white hover:bg-blue-700"
             }`}
           >
-            Request a free quote
+            Innovate with us
             <span aria-hidden>›</span>
           </Link>
           <Link

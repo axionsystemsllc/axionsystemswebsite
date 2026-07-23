@@ -17,12 +17,12 @@ const services = [
   {
     title: "PCB & Hardware Design",
     href: "/axion-electrical",
-    image: "/images/generated/electronics-validation-lab.png",
+    image: "/images/generated/clean-hardware-bench.png",
   },
   {
     title: "Manufacturing Support",
     href: "/axion-manufacturing",
-    image: "/images/generated/manufacturing-cnc.png",
+    image: "/images/generated/laser-cutting-metal.png",
   },
   {
     title: "Rapid Prototyping",
@@ -53,7 +53,7 @@ const divisions = [
     text: "Axion Manufacturing helps customers move from model, drawing, or rough concept to physical prototype with fast iteration, direct updates, and practical design-for-manufacturing input.",
     href: "/axion-manufacturing",
     cta: "Explore Manufacturing",
-    image: "/images/generated/manufacturing-cnc.png",
+    image: "/images/generated/laser-cutting-metal.png",
   },
   {
     eyebrow: "Axion AI",
@@ -69,7 +69,7 @@ const divisions = [
     text: "Axion Electrical supports board design, hardware redesign, wiring, bring-up, troubleshooting, and documentation for products that need reliable electrical execution.",
     href: "/axion-electrical",
     cta: "Explore Electrical",
-    image: "/images/generated/electronics-validation-lab.png",
+    image: "/images/generated/clean-hardware-bench.png",
   },
 ];
 
@@ -77,7 +77,7 @@ const industries = [
   {
     title: "Manufacturing Teams",
     text: "Precision prototyping, fixtures, machining, and fast local iteration.",
-    image: "/images/generated/manufacturing-cnc.png",
+    image: "/images/generated/laser-cutting-metal.png",
   },
   {
     title: "Business Operations",
@@ -92,7 +92,7 @@ const industries = [
   {
     title: "Industrial Electronics",
     text: "PCB design, bring-up, redesign, field integration, and documentation.",
-    image: "/images/generated/electronics-validation-lab.png",
+    image: "/images/generated/clean-hardware-bench.png",
   },
   {
     title: "Robotics Projects",
@@ -160,15 +160,15 @@ export default function Home() {
       <section className="relative isolate overflow-hidden bg-slate-950 text-white">
         <div className="hero-motion absolute inset-0 -z-20">
           <Image
-            src="/images/generated/hero-cloud-engineering.png"
-            alt="Expansive Axion engineering workspace above the clouds"
+            src="/images/generated/hero-drone-facility.png"
+            alt="Axion drone prototype flying near a local engineering facility"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-90"
+            className="object-cover object-center opacity-95"
           />
         </div>
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/68 to-slate-950/6" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950/88 via-slate-950/54 to-slate-950/4" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-slate-950 to-transparent" />
         <div aria-hidden className="hero-geometry" />
 
@@ -187,7 +187,7 @@ export default function Home() {
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <PrimaryLink href="/contact" accent>
-                Request a free quote
+                Innovate with us
               </PrimaryLink>
               <Link
                 href="/services"
@@ -240,8 +240,8 @@ export default function Home() {
 
           <div className="relative min-h-[430px] overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
             <Image
-              src="/images/generated/electronics-validation-lab.png"
-              alt="Axion electronics validation bench"
+              src="/images/generated/laser-cutting-metal.png"
+              alt="Precision manufacturing machinery cutting metal"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -342,7 +342,7 @@ export default function Home() {
                         : "text-slate-500 decoration-slate-300 hover:text-slate-950"
                     }`}
                   >
-                    Request a quote
+                    Innovate with us
                   </Link>
                 </div>
               </div>
@@ -391,7 +391,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
-              Ready to get started
+              Ready to build
             </p>
             <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
               Tell us what you are building. We will help shape the fastest
@@ -406,7 +406,7 @@ export default function Home() {
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <PrimaryLink href="/contact" light>
-                Request a free quote
+                Innovate with us
               </PrimaryLink>
               <Link
                 href="/about"
