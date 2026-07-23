@@ -501,6 +501,388 @@ html {
   clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
 }
 
+.services-page-hero,
+.projects-hero,
+.about-hero {
+  min-height: 620px;
+}
+
+.services-page-hero::after,
+.projects-hero::after,
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -1px -8%;
+  height: 86px;
+  background: white;
+  clip-path: polygon(0 62%, 100% 0, 100% 100%, 0 100%);
+}
+
+.services-hero-panel {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(2, 6, 23, 0.38);
+  padding: 28px;
+  backdrop-filter: blur(14px);
+}
+
+.services-hero-panel p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.services-hero-panel a {
+  margin-top: 24px;
+  display: inline-flex;
+  border-radius: 8px;
+  background: var(--axion-yellow);
+  padding: 12px 20px;
+  color: #020617;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.services-page-catalog {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(250, 204, 21, 0.16), transparent 26%),
+    linear-gradient(135deg, #06162b 0%, #020617 62%, #08172c 100%);
+}
+
+.services-page-catalog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 88px 88px;
+}
+
+.services-process-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(116deg, transparent 0 64%, rgba(250, 204, 21, 0.16) 64.2%, transparent 64.9% 100%),
+    linear-gradient(180deg, #ffffff 0%, #f5f8fb 100%);
+}
+
+.services-process-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: center;
+  border-left: 4px solid var(--axion-yellow);
+  background: white;
+  padding: 22px;
+  box-shadow: 0 18px 56px rgba(6, 22, 43, 0.08);
+}
+
+.services-process-card span {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 900;
+  color: #2563eb;
+}
+
+.services-process-card p {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.services-division-card {
+  position: relative;
+  isolation: isolate;
+  min-height: 420px;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 24px 78px rgba(6, 22, 43, 0.16);
+  transition:
+    transform 320ms ease,
+    box-shadow 320ms ease;
+}
+
+.services-division-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 98px rgba(6, 22, 43, 0.24);
+}
+
+.services-division-card img {
+  transition: transform 800ms ease;
+}
+
+.services-division-card:hover img {
+  transform: scale(1.055);
+}
+
+.services-division-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.08), rgba(2, 6, 23, 0.9));
+}
+
+.services-division-copy {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  display: grid;
+  gap: 12px;
+  padding: 28px;
+}
+
+.services-division-copy strong {
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.services-division-copy span {
+  max-width: 23rem;
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.6;
+}
+
+.about-principles {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to right, rgba(6, 22, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+  background-size: 82px 82px, 82px 82px, auto;
+}
+
+.about-principle-card {
+  border-top: 3px solid var(--axion-yellow);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 24px;
+  box-shadow: 0 18px 56px rgba(6, 22, 43, 0.08);
+}
+
+.about-principle-card span,
+.about-team-card > p:first-of-type {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 900;
+}
+
+.about-principle-card span {
+  color: #2563eb;
+}
+
+.about-principle-card p {
+  margin-top: 18px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.about-team-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(250, 204, 21, 0.14), transparent 24%),
+    linear-gradient(135deg, #06162b 0%, #020617 64%, #07162b 100%);
+}
+
+.about-team-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.26;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 90px 90px;
+}
+
+.about-team-card {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 22px;
+  backdrop-filter: blur(12px);
+}
+
+.about-team-card::after {
+  content: "";
+  position: absolute;
+  right: -38px;
+  top: -20px;
+  height: 120px;
+  width: 84px;
+  background: rgba(250, 204, 21, 0.22);
+  transform: skewX(-18deg);
+}
+
+.about-team-image {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #020617;
+  color: white;
+}
+
+.about-team-image span {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.about-team-card h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.about-team-card p:last-child {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.55;
+}
+
+.about-cta,
+.projects-cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(250, 204, 21, 0.14), transparent 26%),
+    linear-gradient(135deg, #06162b 0%, #020617 72%);
+}
+
+.about-cta::after,
+.projects-cta::after {
+  content: "";
+  position: absolute;
+  right: -8%;
+  top: 0;
+  height: 100%;
+  width: 34%;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  transform: skewX(-18deg);
+}
+
+.projects-featured {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(112deg, transparent 0 64%, rgba(250, 204, 21, 0.16) 64.2%, transparent 64.9% 100%),
+    #ffffff;
+}
+
+.projects-featured-image {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
+  box-shadow: 0 28px 86px rgba(6, 22, 43, 0.18);
+}
+
+.project-tag {
+  display: inline-flex;
+  border: 1px solid #cbd5e1;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 9px 14px;
+  color: #334155;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.projects-list {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to right, rgba(6, 22, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, #f7fafc 0%, #ffffff 100%);
+  background-size: 86px 86px, 86px 86px, auto;
+}
+
+.project-case-row {
+  display: grid;
+  align-items: center;
+  gap: 34px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 22px;
+  box-shadow: 0 24px 78px rgba(6, 22, 43, 0.12);
+}
+
+.project-case-media {
+  overflow: hidden;
+}
+
+.project-case-row .project-case-media > div > button {
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  clip-path: polygon(0 0, 94% 0, 100% 100%, 6% 100%);
+}
+
+.project-case-copy {
+  padding: 14px;
+}
+
+.project-case-copy > p {
+  margin-bottom: 16px;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.project-case-copy h2 {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.project-case-copy > span {
+  margin-top: 24px;
+  display: block;
+  max-width: 42rem;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.project-case-copy > div {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (min-width: 1024px) {
+  .project-case-row {
+    grid-template-columns: 1fr 0.82fr;
+  }
+
+  .project-case-row.is-reverse {
+    grid-template-columns: 0.82fr 1fr;
+  }
+
+  .project-case-row.is-reverse .project-case-media {
+    order: 2;
+  }
+
+  .project-case-row.is-reverse .project-case-copy {
+    order: 1;
+  }
+}
+
 .industry-carousel {
   position: relative;
 }
@@ -611,7 +993,9 @@ html {
 @media (max-width: 1024px) {
   .process-crop-frame,
   .branch-image-frame,
-  .division-hero-image {
+  .division-hero-image,
+  .projects-featured-image,
+  .project-case-row .project-case-media > div > button {
     clip-path: none;
     border-radius: 16px;
   }

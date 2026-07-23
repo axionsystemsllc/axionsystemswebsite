@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { SiteHeader } from "../components/SiteHeader";
 
 export const metadata: Metadata = {
@@ -31,84 +32,130 @@ const team = [
   },
 ];
 
+const principles = [
+  "Direct communication with the people shaping the work.",
+  "Prototype-first execution before heavy process.",
+  "AI-assisted exploration with expert human review.",
+  "Small-team speed across hardware, manufacturing, software, and documentation.",
+];
+
 export default function AboutPage() {
   return (
-    <main className="relative isolate min-h-screen overflow-hidden text-slate-950">
-      <div aria-hidden className="engineering-fixed-backdrop" />
+    <main className="relative isolate min-h-screen overflow-hidden bg-white text-slate-950">
       <SiteHeader />
 
-      <section className="relative z-10 border-b border-slate-200 bg-white/88 px-5 py-16 backdrop-blur-sm sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.78fr_1fr] lg:items-end">
+      <section className="about-hero relative isolate overflow-hidden px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <Image
+          src="/images/generated/hero-drone-facility.png"
+          alt="Axion engineering facility and drone prototype"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 -z-20 object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950/92 via-slate-950/68 to-slate-950/18" />
+        <div className="mx-auto grid max-w-7xl gap-12 text-white lg:grid-cols-[0.76fr_1fr] lg:items-end">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
+            <p className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-yellow-300">
+              <span className="h-px w-10 bg-yellow-300" />
               About Axion
             </p>
-            <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-              A small technical team built for fast, reviewed execution.
+            <h1 className="text-6xl font-semibold tracking-tight sm:text-7xl">
+              Built close to the work.
             </h1>
           </div>
-          <p className="max-w-2xl text-lg leading-8 text-slate-600 lg:ml-auto">
-            Axion Systems is the parent company behind Axion Manufacturing,
-            Axion Electrical, and Axion AI & Embedded Solutions. The company is
-            structured around quick communication, direct design support, and
-            prototyping-focused work across physical and intelligent systems.
+          <p className="max-w-2xl text-xl leading-9 text-slate-200">
+            Axion Systems is structured for quick communication, practical
+            design support, and prototyping-focused work across physical and
+            intelligent systems.
           </p>
         </div>
       </section>
 
-      <section className="relative z-10 bg-white/86 px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-10 max-w-3xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
-              Leadership
+      <section className="about-principles px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1fr] lg:items-center">
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
+              Operating model
             </p>
-            <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-              Directors across AI, manufacturing, and electrical systems.
+            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+              Lean enough to move fast. Serious enough to review the work.
             </h2>
           </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member) => (
-              <article
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center"
-                key={member.name}
-              >
-                <div className="mx-auto grid h-36 w-36 place-items-center overflow-hidden rounded-full border border-slate-200 bg-slate-950 text-3xl font-semibold text-white shadow-[0_18px_50px_rgba(15,23,42,0.16)]">
-                  {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={220}
-                      height={220}
-                      className="h-full w-full object-cover"
-                    />
-                  ) : (
-                    member.initials
-                  )}
-                </div>
-                <h3 className="mt-6 text-xl font-semibold tracking-tight">
-                  {member.name}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  {member.role}
-                </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {principles.map((principle, index) => (
+              <article className="about-principle-card" key={principle}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{principle}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative z-10 bg-slate-950 px-5 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1fr] lg:items-center">
+      <section className="about-team-section px-5 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 grid gap-6 lg:grid-cols-[0.76fr_1fr] lg:items-end">
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-yellow-300">
+                Leadership
+              </p>
+              <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+                Directors across AI, manufacturing, and electrical systems.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-8 text-slate-300 lg:ml-auto">
+              The team is organized around hands-on delivery, not layers of
+              bureaucracy. Customers get practical direction from the people
+              closest to the technical decisions.
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {team.map((member, index) => (
+              <article className="about-team-card" key={member.name}>
+                <div className="about-team-image">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={320}
+                      height={320}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <span>{member.initials}</span>
+                  )}
+                </div>
+                <p className="font-mono text-xs text-yellow-300">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3>{member.name}</h3>
+                <p>{member.role}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="about-cta mx-auto grid max-w-7xl gap-8 p-8 text-white sm:p-10 lg:grid-cols-[0.82fr_1fr] lg:items-center">
           <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            We stay close to the work so customers can move faster.
+            Bring the rough idea, the broken workflow, or the first prototype.
           </h2>
-          <p className="text-base leading-8 text-slate-300">
-            The Axion model is intentionally lean: use AI where it speeds up
-            research, drafting, modeling, and exploration; rely on human review
-            for judgment; and keep customers in direct contact with the people
-            shaping the design.
-          </p>
+          <div>
+            <p className="text-base leading-8 text-slate-300">
+              Axion helps shape the next practical step, whether that is a
+              board revision, prototype build, AI workflow, product design, or
+              documentation package.
+            </p>
+            <Link
+              className="mt-7 inline-flex rounded-lg bg-yellow-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-yellow-300"
+              href="/contact"
+            >
+              Innovate with us
+            </Link>
+          </div>
         </div>
       </section>
     </main>
