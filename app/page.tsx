@@ -1,48 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IndustryCarousel } from "./components/IndustryCarousel";
+import { ServicesCarousel } from "./components/ServicesCarousel";
 import { SiteHeader } from "./components/SiteHeader";
 
 const services = [
   {
-    title: "Business AI Solutions",
-    href: "/axion-ai",
-    image: "/images/ai-workspace.png",
-  },
-  {
-    title: "Embedded AI Systems",
-    href: "/axion-ai",
-    image: "/images/embedded-systems.png",
-  },
-  {
-    title: "PCB & Hardware Design",
+    title: "Hardware Development",
+    text: "Embedded electronics, PCB design, board bring-up, integration, and hardware redesign.",
     href: "/axion-electrical",
-    image: "/images/generated/clean-hardware-bench.png",
+    image: "/images/generated/hardware-development-macro.png",
   },
   {
-    title: "Manufacturing Support",
+    title: "Manufacturing & Design",
+    text: "Precision manufacturing support, process-minded design, fixtures, and local iteration.",
     href: "/axion-manufacturing",
     image: "/images/generated/laser-cutting-metal.png",
   },
   {
-    title: "Rapid Prototyping",
+    title: "Product Development & Prototyping",
+    text: "Mechanical concepts, proof-of-concept builds, CAD-to-part workflows, and prototype validation.",
     href: "/axion-manufacturing",
-    image: "/images/projects-polished/drone-field-close.png",
+    image: "/images/generated/product-development-machined.png",
   },
   {
-    title: "Robotics & Automation",
+    title: "Software & AI",
+    text: "Business AI tools, embedded AI, technical software, automation, and decision-support workflows.",
     href: "/axion-ai",
-    image: "/images/generated/robotics-automation-cell.png",
-  },
-  {
-    title: "Reverse Engineering",
-    href: "/services",
-    image: "/images/real-projects/flight-computer-schematic.jpg",
+    image: "/images/generated/software-ai-workbench.png",
   },
   {
     title: "Technical Documentation",
+    text: "Build guides, engineering drawings, handoff packages, test notes, and short-term technical support.",
     href: "/services",
-    image: "/images/services/documentation-service.jpg",
+    image: "/images/generated/technical-documentation-drawings.png",
   },
 ];
 
@@ -69,7 +60,7 @@ const divisions = [
     text: "Axion Electrical supports board design, hardware redesign, wiring, bring-up, troubleshooting, and documentation for products that need reliable electrical execution.",
     href: "/axion-electrical",
     cta: "Explore Electrical",
-    image: "/images/generated/clean-hardware-bench.png",
+    image: "/images/generated/hardware-development-macro.png",
   },
 ];
 
@@ -92,7 +83,7 @@ const industries = [
   {
     title: "Industrial Electronics",
     text: "PCB design, bring-up, redesign, field integration, and documentation.",
-    image: "/images/generated/clean-hardware-bench.png",
+    image: "/images/generated/hardware-development-macro.png",
   },
   {
     title: "Robotics Projects",
@@ -218,56 +209,69 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="scroll-reveal section-angle-light bg-white px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-center">
+      <section className="scroll-reveal what-we-do-section px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.78fr_1fr] lg:items-center">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
-              How we work
+              Axion Systems
             </p>
             <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-              AI speed with engineering judgment.
+              Human review, fast iteration, and practical engineering output.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              We use AI to accelerate exploration, design, and documentation,
-              then apply technical review and hands-on execution before work
-              becomes production intent.
+              We combine AI-assisted design workflows with hands-on engineering
+              review across hardware, manufacturing, software, and
+              documentation. The result is faster movement from idea to
+              prototype without losing technical judgment.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <PrimaryLink href="/about">Meet the team</PrimaryLink>
-              <TextLink href="/projects">View projects</TextLink>
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              {["Design", "Prototype", "Scale"].map((item, index) => (
+                <div className="what-we-do-step" key={item}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{item}</strong>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="relative min-h-[430px] overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
+          <div className="process-crop-frame">
             <Image
               src="/images/generated/laser-cutting-metal.png"
               alt="Precision manufacturing machinery cutting metal"
               fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 52vw"
               className="object-cover"
             />
           </div>
         </div>
       </section>
 
-      <section className="scroll-reveal section-blueprint px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <section className="scroll-reveal services-showcase px-5 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-yellow-300">
                 Our services
               </p>
               <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-                Engineering, AI, and prototype support in one place.
+                Engineering services built around speed, clarity, and execution.
               </h2>
             </div>
             <div className="flex flex-wrap gap-4">
-              <PrimaryLink href="/services">View all services</PrimaryLink>
-              <TextLink href="/contact">Ask what fits</TextLink>
+              <PrimaryLink href="/services" accent>
+                View all services
+              </PrimaryLink>
+              <Link
+                className="inline-flex items-center text-sm font-semibold text-slate-300 underline decoration-white/30 underline-offset-4 transition hover:text-white"
+                href="/contact"
+              >
+                Ask what fits
+              </Link>
             </div>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <ServicesCarousel slides={services} />
+          <div className="hidden">
             {services.map((service) => (
               <Link
                 className="group overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(15,23,42,0.13)]"
@@ -306,8 +310,8 @@ export default function Home() {
 
         return (
           <section
-            className={`scroll-reveal px-5 py-16 sm:px-6 lg:px-8 lg:py-24 ${
-              dark ? "bg-slate-950 text-white" : "bg-white text-slate-950"
+            className={`scroll-reveal branch-section px-5 py-16 sm:px-6 lg:px-8 lg:py-24 ${
+              dark ? "is-dark bg-slate-950 text-white" : "bg-white text-slate-950"
             }`}
             key={division.eyebrow}
           >
@@ -347,7 +351,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                className={`relative min-h-[430px] overflow-hidden rounded-[1.5rem] border shadow-[0_24px_80px_rgba(15,23,42,0.12)] ${
+                className={`branch-image-frame relative min-h-[430px] overflow-hidden border shadow-[0_24px_80px_rgba(15,23,42,0.12)] ${
                   reverse ? "lg:order-1" : ""
                 } ${dark ? "border-white/10 bg-white/5" : "border-slate-200 bg-slate-100"}`}
               >

@@ -23,7 +23,7 @@ const industries = [
   {
     title: "Industrial Electronics",
     text: "Board updates, enclosure-aware electronics, wiring, integration, troubleshooting, and field-ready documentation.",
-    image: "/images/generated/clean-hardware-bench.png",
+    image: "/images/generated/hardware-development-macro.png",
   },
   {
     title: "Robotics and Automation",

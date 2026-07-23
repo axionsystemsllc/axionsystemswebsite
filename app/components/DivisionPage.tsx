@@ -34,8 +34,8 @@ export function DivisionPage({
       <div aria-hidden className="engineering-fixed-backdrop" />
       <SiteHeader />
 
-      <section className="relative z-10 border-b border-slate-200 bg-white/88 px-5 py-16 backdrop-blur-sm sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-center">
+      <section className="division-hero-section relative z-10 border-b border-slate-200 bg-white/88 px-5 py-14 backdrop-blur-sm sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-center">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               {division}
@@ -53,7 +53,7 @@ export function DivisionPage({
               Innovate with us
             </Link>
           </div>
-          <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
+          <div className="division-hero-image relative min-h-[440px] overflow-hidden border border-slate-200 bg-slate-100 shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
             <Image
               src={heroImage}
               alt={`${division} work`}

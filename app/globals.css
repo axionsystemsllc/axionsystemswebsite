@@ -278,6 +278,229 @@ html {
     linear-gradient(128deg, transparent 0 78%, rgba(6, 22, 43, 0.14) 78.1%, transparent 78.6% 100%);
 }
 
+.what-we-do-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(112deg, transparent 0 61%, rgba(250, 204, 21, 0.18) 61.2%, transparent 61.9% 100%),
+    linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+}
+
+.what-we-do-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  background:
+    linear-gradient(to right, rgba(6, 22, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.04) 1px, transparent 1px);
+  background-size: 84px 84px;
+}
+
+.what-we-do-step {
+  border-left: 3px solid var(--axion-yellow);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 16px 18px;
+  box-shadow: 0 16px 48px rgba(6, 22, 43, 0.08);
+}
+
+.what-we-do-step span {
+  display: block;
+  color: #2563eb;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.what-we-do-step strong {
+  margin-top: 8px;
+  display: block;
+  font-size: 1.05rem;
+}
+
+.process-crop-frame {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  background: #020617;
+  box-shadow: 0 30px 90px rgba(6, 22, 43, 0.18);
+}
+
+.services-showcase {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(250, 204, 21, 0.16), transparent 24%),
+    linear-gradient(135deg, #06162b 0%, #020617 62%, #06162b 100%);
+}
+
+.services-showcase::before,
+.services-showcase::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.services-showcase::before {
+  inset: 0;
+  opacity: 0.42;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 86px 86px;
+}
+
+.services-showcase::after {
+  right: -8%;
+  top: 8%;
+  height: 72%;
+  width: 38%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 58%);
+  transform: skewX(-18deg);
+}
+
+.services-carousel {
+  position: relative;
+}
+
+.services-carousel-track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.services-slide-card {
+  position: relative;
+  isolation: isolate;
+  min-height: 470px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #020617;
+  color: white;
+  box-shadow: 0 24px 76px rgba(0, 0, 0, 0.28);
+  transition:
+    transform 360ms ease,
+    box-shadow 360ms ease;
+}
+
+.services-slide-card.is-featured {
+  min-height: 510px;
+}
+
+.services-slide-card img {
+  transform: scale(1.01);
+  transition: transform 900ms ease;
+}
+
+.services-slide-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.38);
+}
+
+.services-slide-card:hover img {
+  transform: scale(1.065);
+}
+
+.services-slide-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(2, 6, 23, 0.04) 0%, rgba(2, 6, 23, 0.2) 42%, rgba(2, 6, 23, 0.94) 100%),
+    linear-gradient(90deg, rgba(2, 6, 23, 0.24), transparent 46%);
+}
+
+.services-slide-copy {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  display: grid;
+  gap: 12px;
+  padding: 28px;
+}
+
+.services-slide-copy strong {
+  max-width: 17rem;
+  font-size: 1.55rem;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.services-slide-copy span {
+  max-width: 19rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.services-slide-arrow {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  z-index: 2;
+  display: grid;
+  height: 42px;
+  width: 42px;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  font-weight: 800;
+  backdrop-filter: blur(10px);
+}
+
+.branch-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.branch-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.52;
+  background:
+    linear-gradient(118deg, transparent 0 70%, rgba(250, 204, 21, 0.16) 70.2%, transparent 70.8% 100%),
+    linear-gradient(118deg, transparent 0 18%, rgba(6, 22, 43, 0.08) 18.2%, transparent 18.8% 100%);
+}
+
+.branch-section.is-dark::before {
+  background:
+    linear-gradient(118deg, transparent 0 62%, rgba(250, 204, 21, 0.16) 62.2%, transparent 62.8% 100%),
+    linear-gradient(118deg, transparent 0 22%, rgba(255, 255, 255, 0.1) 22.2%, transparent 22.8% 100%);
+}
+
+.branch-image-frame {
+  border-radius: 0;
+  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+}
+
+.division-hero-section {
+  overflow: hidden;
+}
+
+.division-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.44;
+  background:
+    linear-gradient(112deg, transparent 0 58%, rgba(250, 204, 21, 0.17) 58.2%, transparent 58.8% 100%),
+    linear-gradient(to right, rgba(6, 22, 43, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.035) 1px, transparent 1px);
+  background-size: auto, 82px 82px, 82px 82px;
+}
+
+.division-hero-image {
+  border-radius: 0;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+
 .industry-carousel {
   position: relative;
 }
@@ -386,6 +609,25 @@ html {
 }
 
 @media (max-width: 1024px) {
+  .process-crop-frame,
+  .branch-image-frame,
+  .division-hero-image {
+    clip-path: none;
+    border-radius: 16px;
+  }
+
+  .services-carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+
+  .services-slide-card {
+    min-width: min(86vw, 440px);
+    scroll-snap-align: start;
+  }
+
   .industry-carousel-track {
     display: flex;
     overflow-x: auto;
@@ -400,6 +642,12 @@ html {
 }
 
 @media (max-width: 640px) {
+  .process-crop-frame,
+  .services-slide-card,
+  .services-slide-card.is-featured {
+    min-height: 360px;
+  }
+
   .industry-slide-card,
   .industry-slide-card.is-featured {
     min-height: 360px;
