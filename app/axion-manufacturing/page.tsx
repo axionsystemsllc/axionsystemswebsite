@@ -20,14 +20,14 @@ export default function AxionManufacturingPage() {
         "Manufacturing handoff documentation",
       ]}
       division="Axion Manufacturing"
-      heroImage="/images/services/product-integration-service.jpg"
+      heroImage="/images/projects-polished/tank-vision-product-spread.png"
       intro="Manufacturing support for prototypes, models, and short-run production."
       overview="Axion Manufacturing helps teams move from idea, sketch, CAD model, or early prototype into physical parts and production-ready thinking. The focus is fast communication, practical tradeoffs, and quick iteration."
       projects={[
         {
           title: "Prototype fixtures and housings",
           text: "Custom physical support for electronics, test setups, controls, and early product assemblies.",
-          image: "/images/real-projects/tank-vision-enclosure.jpg",
+          image: "/images/projects-polished/tank-vision-product-spread.png",
         },
         {
           title: "Modeling and design refinement",

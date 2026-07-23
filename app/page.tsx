@@ -16,7 +16,7 @@ const services = [
   {
     title: "PCB & Hardware Design",
     href: "/axion-electrical",
-    image: "/images/pcb-redesign.png",
+    image: "/images/projects-polished/tank-vision-pcb-lab.png",
   },
   {
     title: "Manufacturing Support",
@@ -26,12 +26,12 @@ const services = [
   {
     title: "Rapid Prototyping",
     href: "/axion-manufacturing",
-    image: "/images/real-projects/scratch-drone-prototype.jpg",
+    image: "/images/projects-polished/drone-field-close.png",
   },
   {
     title: "Robotics & Automation",
     href: "/axion-ai",
-    image: "/images/drone-controls.png",
+    image: "/images/projects-polished/sensor-turret-lab.png",
   },
   {
     title: "Reverse Engineering",
@@ -52,7 +52,7 @@ const divisions = [
     text: "Axion Manufacturing helps customers move from model, drawing, or rough concept to physical prototype with fast iteration, direct updates, and practical design-for-manufacturing input.",
     href: "/axion-manufacturing",
     cta: "Explore Manufacturing",
-    image: "/images/services/product-integration-service.jpg",
+    image: "/images/projects-polished/tank-vision-product-spread.png",
   },
   {
     eyebrow: "Axion AI",
@@ -60,7 +60,7 @@ const divisions = [
     text: "Axion AI builds applied AI systems for business operations and technical products, including automation, embedded intelligence, robotics support, and engineering software.",
     href: "/axion-ai",
     cta: "Explore Axion AI",
-    image: "/images/ai-workspace.png",
+    image: "/images/projects-polished/ground-station-dashboard.png",
   },
   {
     eyebrow: "Axion Electrical",
@@ -68,14 +68,14 @@ const divisions = [
     text: "Axion Electrical supports board design, hardware redesign, wiring, bring-up, troubleshooting, and documentation for products that need reliable electrical execution.",
     href: "/axion-electrical",
     cta: "Explore Electrical",
-    image: "/images/real-projects/flight-computer-pcb.jpg",
+    image: "/images/projects-polished/tank-vision-pcb-lab.png",
   },
 ];
 
 const industries = [
   {
     title: "Manufacturing teams",
-    image: "/images/services/product-integration-service.jpg",
+    image: "/images/projects-polished/tank-vision-product-spread.png",
   },
   {
     title: "Local business operations",
@@ -83,15 +83,15 @@ const industries = [
   },
   {
     title: "Startup prototypes",
-    image: "/images/real-projects/scratch-drone-prototype.jpg",
+    image: "/images/projects-polished/drone-field-wide.png",
   },
   {
     title: "Industrial electronics",
-    image: "/images/real-projects/tank-vision-enclosure.jpg",
+    image: "/images/projects-polished/tank-vision-layout-lab.png",
   },
   {
     title: "Robotics projects",
-    image: "/images/drone-controls.png",
+    image: "/images/projects-polished/sensor-turret-lab.png",
   },
   {
     title: "AI-enabled workflows",
@@ -229,7 +229,7 @@ export default function Home() {
 
           <div className="relative min-h-[430px] overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
             <Image
-              src="/images/real-projects/tank-vision-blue-board.jpg"
+              src="/images/projects-polished/tank-vision-pcb-lab.png"
               alt="Axion electronics project board"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

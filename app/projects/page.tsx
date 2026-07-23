@@ -25,8 +25,9 @@ const projects = [
     eyebrow: "Industrial electronics",
     text: "A field-ready electronics and enclosure package for Tank Vision 2.2, designed for a major petroleum company. The effort included internal board design, Ethernet-facing hardware, enclosure integration, connector access, and product-level packaging.",
     images: [
-      "/images/real-projects/tank-vision-enclosure.jpg",
-      "/images/real-projects/tank-vision-blue-board.jpg",
+      "/images/projects-polished/tank-vision-product-spread.png",
+      "/images/projects-polished/tank-vision-pcb-lab.png",
+      "/images/projects-polished/tank-vision-layout-lab.png",
       "/images/real-projects/tank-vision-green-board.jpg",
       "/images/real-projects/tank-vision-pcb-render.jpg",
     ],
@@ -36,7 +37,13 @@ const projects = [
     title: "Drone Design and Prototyping",
     eyebrow: "Prototype controls",
     text: "A scratch-built drone prototype created as a controls and integration test bed. The work centered on custom mechanical design, embedded electronics, power distribution, and early flight-control experimentation.",
-    images: ["/images/real-projects/scratch-drone-prototype.jpg"],
+    images: [
+      "/images/projects-polished/drone-field-close.png",
+      "/images/projects-polished/drone-field-wide.png",
+      "/images/projects-polished/sensor-turret-lab.png",
+      "/images/projects-polished/ground-station-console.png",
+      "/images/projects-polished/ground-station-dashboard.png",
+    ],
     tags: ["Ground-up prototype", "Control systems", "Mechanical integration"],
   },
   {

@@ -13,7 +13,7 @@ const industries = [
   {
     title: "Manufacturing Teams",
     text: "Prototype fixtures, short-run planning, process support, tooling ideas, and practical design-for-manufacturing feedback.",
-    image: "/images/services/product-integration-service.jpg",
+    image: "/images/projects-polished/tank-vision-product-spread.png",
   },
   {
     title: "Local Businesses",
@@ -23,22 +23,22 @@ const industries = [
   {
     title: "Industrial Electronics",
     text: "Board updates, enclosure-aware electronics, wiring, integration, troubleshooting, and field-ready documentation.",
-    image: "/images/real-projects/tank-vision-blue-board.jpg",
+    image: "/images/projects-polished/tank-vision-pcb-lab.png",
   },
   {
     title: "Robotics and Automation",
     text: "Sensor integration, embedded control, autonomy concepts, robotic prototypes, and hardware-aware software.",
-    image: "/images/drone-controls.png",
+    image: "/images/projects-polished/sensor-turret-lab.png",
   },
   {
     title: "Startup Prototypes",
     text: "Early product builds, proof-of-concept systems, design iteration, technical validation, and fast customer feedback loops.",
-    image: "/images/real-projects/scratch-drone-prototype.jpg",
+    image: "/images/projects-polished/drone-field-wide.png",
   },
   {
     title: "Technical Product Teams",
     text: "PCB work, software tools, AI-enabled systems, hardware revisions, documentation, and focused short-term execution.",
-    image: "/images/real-projects/flight-computer-pcb.jpg",
+    image: "/images/projects-polished/ground-station-console.png",
   },
 ];
 
