@@ -60,7 +60,7 @@ export default function AboutPage() {
               <span className="h-px w-10 bg-yellow-300" />
               About Axion
             </p>
-            <h1 className="text-6xl font-semibold tracking-tight sm:text-7xl">
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-7xl">
               Built close to the work.
             </h1>
           </div>
@@ -78,7 +78,7 @@ export default function AboutPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               Operating model
             </p>
-            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
               Lean enough to move fast. Serious enough to review the work.
             </h2>
           </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-yellow-300">
                 Leadership
               </p>
-              <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+              <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
                 Directors across AI, manufacturing, and electrical systems.
               </h2>
             </div>
@@ -140,7 +140,7 @@ export default function AboutPage() {
 
       <section className="px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="about-cta mx-auto grid max-w-7xl gap-8 p-8 text-white sm:p-10 lg:grid-cols-[0.82fr_1fr] lg:items-center">
-          <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
             Bring the rough idea, the broken workflow, or the first prototype.
           </h2>
           <div>

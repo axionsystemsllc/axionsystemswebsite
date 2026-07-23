@@ -169,7 +169,7 @@ export default function Home() {
               <span className="h-px w-10 bg-yellow-300" />
               Axion Systems
             </p>
-            <h1 className="max-w-6xl text-7xl font-semibold tracking-tight text-white sm:text-8xl lg:text-[8.8rem] lg:leading-[0.88]">
+            <h1 className="max-w-6xl text-5xl font-semibold tracking-tight text-white sm:text-8xl lg:text-[8.8rem] lg:leading-[0.88]">
               Where ideas become innovation.
             </h1>
             <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-200 sm:text-2xl">
@@ -215,7 +215,7 @@ export default function Home() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               Axion Systems
             </p>
-            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
               Human review, fast iteration, and practical engineering output.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
@@ -253,7 +253,7 @@ export default function Home() {
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-yellow-300">
                 Our services
               </p>
-              <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+              <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
                 Engineering services built around speed, clarity, and execution.
               </h2>
             </div>
@@ -324,7 +324,7 @@ export default function Home() {
                 >
                   {division.eyebrow}
                 </p>
-                <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+                <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
                   {division.title}
                 </h2>
                 <p
@@ -375,7 +375,7 @@ export default function Home() {
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
                 Our industries
               </p>
-              <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+              <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
                 We support your market with practical engineering expertise.
               </h2>
             </div>
@@ -397,7 +397,7 @@ export default function Home() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
               Ready to build
             </p>
-            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
               Tell us what you are building. We will help shape the fastest
               next step.
             </h2>

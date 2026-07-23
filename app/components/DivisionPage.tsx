@@ -40,7 +40,7 @@ export function DivisionPage({
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               {division}
             </p>
-            <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
               {intro}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
@@ -72,7 +72,7 @@ export function DivisionPage({
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               About {shortName}
             </p>
-            <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
               Built for practical execution and clear handoffs.
             </h2>
           </div>
@@ -103,7 +103,7 @@ export function DivisionPage({
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-blue-200">
                 Projects
               </p>
-              <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
                 Work shaped around prototypes, systems, and production needs.
               </h2>
             </div>

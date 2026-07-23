@@ -64,7 +64,7 @@ export default function IndustriesPage() {
             <span className="h-px w-10 bg-blue-300" />
             Industries
           </p>
-          <h1 className="max-w-5xl text-6xl font-semibold tracking-tight sm:text-7xl">
+          <h1 className="max-w-5xl text-4xl font-semibold tracking-tight sm:text-7xl">
             Technical support for teams that need momentum.
           </h1>
           <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-200">
@@ -106,7 +106,7 @@ export default function IndustriesPage() {
 
       <section className="relative z-10 bg-slate-950 px-5 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-center">
-          <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
             Not seeing your exact industry? Start with the technical problem.
           </h2>
           <div>

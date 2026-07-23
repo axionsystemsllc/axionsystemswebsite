@@ -22,7 +22,7 @@ export default function ContactPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               Contact and quote
             </p>
-            <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
               Ask for a free quote or a practical next step.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">

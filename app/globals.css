@@ -18,6 +18,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -1026,15 +1027,187 @@ html {
 }
 
 @media (max-width: 640px) {
+  section[class*="py-20"],
+  section[class*="py-16"] {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  section[class*="py-14"] {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-geometry::before,
+  .hero-geometry::after {
+    opacity: 0.38;
+    right: -24%;
+    width: 72vw;
+  }
+
+  .hero-motion img {
+    animation: none;
+    transform: scale(1.02);
+  }
+
+  .section-slice-dark::after,
+  .services-page-hero::after,
+  .projects-hero::after,
+  .about-hero::after {
+    height: 42px;
+  }
+
+  .services-page-hero,
+  .projects-hero,
+  .about-hero {
+    min-height: 520px;
+  }
+
+  .services-hero-panel {
+    padding: 20px;
+  }
+
+  .services-hero-panel p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .services-carousel-track,
+  .industry-carousel-track {
+    margin-right: -1.25rem;
+    padding-right: 1.25rem;
+    scroll-padding-left: 0;
+  }
+
+  .services-carousel-track::-webkit-scrollbar,
+  .industry-carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
   .process-crop-frame,
   .services-slide-card,
   .services-slide-card.is-featured {
-    min-height: 360px;
+    min-height: 340px;
   }
 
   .industry-slide-card,
   .industry-slide-card.is-featured {
-    min-height: 360px;
+    min-height: 340px;
+  }
+
+  .services-slide-card {
+    min-width: min(82vw, 360px);
+  }
+
+  .industry-slide-card {
+    min-width: min(82vw, 360px);
+  }
+
+  .services-slide-copy,
+  .industry-slide-copy,
+  .services-division-copy {
+    padding: 20px;
+  }
+
+  .services-slide-copy strong,
+  .industry-slide-copy strong {
+    font-size: 1.25rem;
+  }
+
+  .services-slide-copy span,
+  .industry-slide-copy span,
+  .services-division-copy span {
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .services-slide-arrow,
+  .industry-carousel-button {
+    height: 38px;
+    width: 38px;
+  }
+
+  .branch-image-frame,
+  .division-hero-image {
+    min-height: 300px;
+  }
+
+  .projects-featured-image {
+    min-height: 320px;
+  }
+
+  .project-case-row {
+    gap: 20px;
+    padding: 14px;
+  }
+
+  .project-case-copy {
+    padding: 6px 4px 4px;
+  }
+
+  .project-case-copy h2 {
+    font-size: 2rem;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+  }
+
+  .project-case-copy > span {
+    margin-top: 16px;
+    line-height: 1.65;
+  }
+
+  .project-tag {
+    padding: 8px 11px;
+    font-size: 0.78rem;
+  }
+
+  .services-division-card {
+    min-height: 320px;
+  }
+
+  .about-principle-card,
+  .about-team-card,
+  .services-process-card {
+    padding: 18px;
+  }
+
+  .about-team-image {
+    max-height: 280px;
+  }
+
+  .about-cta,
+  .projects-cta {
+    padding: 1.5rem;
+  }
+
+  .about-cta::after,
+  .projects-cta::after {
+    opacity: 0.32;
+    width: 58%;
+  }
+
+  .division-hero-section .division-hero-image + *,
+  .division-hero-section .division-hero-image {
+    margin-top: 0;
+  }
+
+  .division-hero-section article,
+  .industry-carousel,
+  .services-carousel {
+    max-width: 100%;
+  }
+
+  .industry-slide-kicker {
+    right: 16px;
+    top: 14px;
+  }
+
+  .engineering-fixed-backdrop::before {
+    background-size: 52px 52px;
+  }
+
+  .what-we-do-step {
+    padding: 14px 15px;
   }
 }
 

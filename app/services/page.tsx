@@ -92,7 +92,7 @@ export default function ServicesPage() {
               <span className="h-px w-10 bg-yellow-300" />
               Services
             </p>
-            <h1 className="max-w-4xl text-6xl font-semibold tracking-tight sm:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-semibold tracking-tight sm:text-7xl">
               Engineering support from idea to working system.
             </h1>
           </div>
@@ -114,7 +114,7 @@ export default function ServicesPage() {
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-yellow-300">
                 Core capabilities
               </p>
-              <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+              <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
                 Focused services with practical engineering depth.
               </h2>
             </div>
@@ -134,7 +134,7 @@ export default function ServicesPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               How work moves
             </p>
-            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
               Small team speed with reviewed technical output.
             </h2>
           </div>

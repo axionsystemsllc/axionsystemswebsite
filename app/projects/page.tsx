@@ -85,7 +85,7 @@ export default function ProjectsPage() {
             <span className="h-px w-10 bg-yellow-300" />
             Projects
           </p>
-          <h1 className="max-w-5xl text-6xl font-semibold tracking-tight sm:text-7xl">
+          <h1 className="max-w-5xl text-4xl font-semibold tracking-tight sm:text-7xl">
             Proof-oriented work across hardware, products, and prototypes.
           </h1>
           <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-200">
@@ -110,7 +110,7 @@ export default function ProjectsPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               Featured project
             </p>
-            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
               {featured.title}
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-600">
