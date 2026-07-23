@@ -15,31 +15,31 @@ const serviceSlides = [
     title: "Hardware Development",
     text: "PCB design, electronics integration, bring-up, embedded hardware planning, and design review.",
     href: "/axion-electrical",
-    image: "/images/generated/hardware-lab-alt.png",
+    image: "/images/generated/warm-electronics-bench.png",
   },
   {
     title: "Manufacturing & Design",
     text: "Prototype fabrication, fixtures, machining support, short-run planning, and DFM feedback.",
     href: "/axion-manufacturing",
-    image: "/images/generated/manufacturing-machining-alt.png",
+    image: "/images/generated/shop-cnc-router.png",
   },
   {
     title: "Product Development & Prototyping",
     text: "Concept-to-prototype execution across CAD, mechanical design, assemblies, and validation.",
     href: "/axion-manufacturing",
-    image: "/images/generated/product-development-machined.png",
+    image: "/images/generated/desktop-3d-printing-prototype.png",
   },
   {
     title: "Software & AI",
     text: "Business AI workflows, embedded AI, technical software, automation, and decision tools.",
     href: "/axion-ai",
-    image: "/images/generated/software-dashboard-alt.png",
+    image: "/images/generated/office-ai-workflow.png",
   },
   {
     title: "Technical Documentation",
     text: "Build guides, schematics, handoff packages, test notes, and engineering documentation.",
     href: "/services",
-    image: "/images/generated/documentation-review-alt.png",
+    image: "/images/generated/prototype-documentation-table.png",
   },
 ];
 
@@ -47,19 +47,19 @@ const divisions = [
   {
     title: "Axion Manufacturing",
     href: "/axion-manufacturing",
-    image: "/images/generated/manufacturing-machining-alt.png",
+    image: "/images/generated/shop-cnc-router.png",
     text: "Rapid prototyping, product development, fixtures, modeling, and manufacturing support.",
   },
   {
     title: "Axion Electrical",
     href: "/axion-electrical",
-    image: "/images/generated/hardware-lab-alt.png",
+    image: "/images/generated/warm-electronics-bench.png",
     text: "PCB design, hardware redesign, board bring-up, wiring, integration, and troubleshooting.",
   },
   {
     title: "Axion AI",
     href: "/axion-ai",
-    image: "/images/generated/software-dashboard-alt.png",
+    image: "/images/generated/office-ai-workflow.png",
     text: "Business AI, embedded AI, robotics support, workflow automation, and engineering tools.",
   },
 ];
@@ -77,8 +77,8 @@ export default function ServicesPage() {
 
       <section className="services-page-hero relative isolate overflow-hidden px-5 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
         <Image
-          src="/images/generated/product-development-machined.png"
-          alt="Machined prototype part over engineering drawings"
+          src="/images/generated/desktop-3d-printing-prototype.png"
+          alt="Desktop 3D printing and prototype assembly workbench"
           fill
           priority
           sizes="100vw"

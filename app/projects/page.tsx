@@ -42,9 +42,9 @@ const projects = [
     title: "Avionics Flight Computer",
     eyebrow: "Avionics",
     text: "A compact flight computer PCB developed for embedded control, sensor interfaces, power regulation, telemetry support, and recovery-oriented system logic.",
-    hero: "/images/real-projects/flight-computer-pcb-polished.png",
+    hero: "/images/real-projects/flight-computer-pcb-bench.png",
     images: [
-      "/images/real-projects/flight-computer-pcb-polished.png",
+      "/images/real-projects/flight-computer-pcb-bench.png",
       "/images/real-projects/flight-computer-schematic.jpg",
     ],
     tags: ["Flight computer PCB", "Embedded control", "Sensor interfaces"],
@@ -53,9 +53,9 @@ const projects = [
     title: "Engineering Documentation and Schematics",
     eyebrow: "Design handoff",
     text: "Technical artifacts that support design review, debugging, manufacturing handoff, and long-term maintainability.",
-    hero: "/images/generated/documentation-review-alt.png",
+    hero: "/images/generated/prototype-documentation-table.png",
     images: [
-      "/images/generated/documentation-review-alt.png",
+      "/images/generated/prototype-documentation-table.png",
       "/images/real-projects/flight-computer-schematic.jpg",
     ],
     tags: ["Schematics", "Design review", "Manufacturing handoff"],

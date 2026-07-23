@@ -20,19 +20,19 @@ export default function AxionAIPage() {
         "Enginuity Workspace development",
       ]}
       division="Axion AI"
-      heroImage="/images/generated/robotics-cell-alt.png"
+      heroImage="/images/generated/prototype-robotics-bench.png"
       intro="AI systems for businesses, embedded products, and engineering teams."
       overview="Axion AI builds practical AI tools for operations, technical workflows, embedded systems, robotics, and engineering education. AI accelerates the work, but expert human review keeps the output grounded."
       projects={[
         {
           title: "Business AI solutions",
           text: "Internal assistants, workflow automation, data-aware tools, and practical AI systems that support daily business operations.",
-          image: "/images/generated/software-dashboard-alt.png",
+          image: "/images/generated/office-ai-workflow.png",
         },
         {
           title: "Embedded AI and robotics",
           text: "Hardware-aware intelligence for sensors, controls, robotics prototypes, and connected technical products.",
-          image: "/images/generated/robotics-cell-alt.png",
+          image: "/images/generated/prototype-robotics-bench.png",
         },
         {
           title: "Enginuity Workspace",
