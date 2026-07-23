@@ -20,14 +20,14 @@ export default function AxionManufacturingPage() {
         "Manufacturing handoff documentation",
       ]}
       division="Axion Manufacturing"
-      heroImage="/images/generated/laser-cutting-metal.png"
+      heroImage="/images/generated/manufacturing-machining-alt.png"
       intro="Manufacturing support for prototypes, models, and short-run production."
       overview="Axion Manufacturing helps teams move from idea, sketch, CAD model, or early prototype into physical parts and production-ready thinking. The focus is fast communication, practical tradeoffs, and quick iteration."
       projects={[
         {
           title: "Prototype fixtures and housings",
           text: "Custom physical support for electronics, test setups, controls, and early product assemblies.",
-          image: "/images/generated/laser-cutting-metal.png",
+          image: "/images/generated/manufacturing-machining-alt.png",
         },
         {
           title: "Modeling and design refinement",
@@ -37,7 +37,7 @@ export default function AxionManufacturingPage() {
         {
           title: "Short-run production prep",
           text: "Manufacturing planning, practical documentation, and vendor-ready handoff for small batches.",
-          image: "/images/services/documentation-service.jpg",
+          image: "/images/generated/documentation-review-alt.png",
         },
       ]}
       shortName="Manufacturing"

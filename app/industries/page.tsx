@@ -13,22 +13,22 @@ const industries = [
   {
     title: "Manufacturing Teams",
     text: "Prototype fixtures, short-run planning, process support, tooling ideas, and practical design-for-manufacturing feedback.",
-    image: "/images/generated/laser-cutting-metal.png",
+    image: "/images/generated/manufacturing-machining-alt.png",
   },
   {
     title: "Local Businesses",
     text: "Business AI tools, workflow automation, dashboards, quote support, document systems, and operational software.",
-    image: "/images/services/technical-software-service.jpg",
+    image: "/images/generated/software-dashboard-alt.png",
   },
   {
     title: "Industrial Electronics",
     text: "Board updates, enclosure-aware electronics, wiring, integration, troubleshooting, and field-ready documentation.",
-    image: "/images/generated/hardware-development-macro.png",
+    image: "/images/generated/hardware-lab-alt.png",
   },
   {
     title: "Robotics and Automation",
     text: "Sensor integration, embedded control, autonomy concepts, robotic prototypes, and hardware-aware software.",
-    image: "/images/generated/robotics-automation-cell.png",
+    image: "/images/generated/robotics-cell-alt.png",
   },
   {
     title: "Startup Prototypes",

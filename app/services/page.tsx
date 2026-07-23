@@ -15,13 +15,13 @@ const serviceSlides = [
     title: "Hardware Development",
     text: "PCB design, electronics integration, bring-up, embedded hardware planning, and design review.",
     href: "/axion-electrical",
-    image: "/images/generated/hardware-development-macro.png",
+    image: "/images/generated/hardware-lab-alt.png",
   },
   {
     title: "Manufacturing & Design",
     text: "Prototype fabrication, fixtures, machining support, short-run planning, and DFM feedback.",
     href: "/axion-manufacturing",
-    image: "/images/generated/laser-cutting-metal.png",
+    image: "/images/generated/manufacturing-machining-alt.png",
   },
   {
     title: "Product Development & Prototyping",
@@ -33,13 +33,13 @@ const serviceSlides = [
     title: "Software & AI",
     text: "Business AI workflows, embedded AI, technical software, automation, and decision tools.",
     href: "/axion-ai",
-    image: "/images/generated/software-ai-workbench.png",
+    image: "/images/generated/software-dashboard-alt.png",
   },
   {
     title: "Technical Documentation",
     text: "Build guides, schematics, handoff packages, test notes, and engineering documentation.",
     href: "/services",
-    image: "/images/generated/technical-documentation-drawings.png",
+    image: "/images/generated/documentation-review-alt.png",
   },
 ];
 
@@ -47,19 +47,19 @@ const divisions = [
   {
     title: "Axion Manufacturing",
     href: "/axion-manufacturing",
-    image: "/images/generated/laser-cutting-metal.png",
+    image: "/images/generated/manufacturing-machining-alt.png",
     text: "Rapid prototyping, product development, fixtures, modeling, and manufacturing support.",
   },
   {
     title: "Axion Electrical",
     href: "/axion-electrical",
-    image: "/images/generated/hardware-development-macro.png",
+    image: "/images/generated/hardware-lab-alt.png",
     text: "PCB design, hardware redesign, board bring-up, wiring, integration, and troubleshooting.",
   },
   {
     title: "Axion AI",
     href: "/axion-ai",
-    image: "/images/generated/software-ai-workbench.png",
+    image: "/images/generated/software-dashboard-alt.png",
     text: "Business AI, embedded AI, robotics support, workflow automation, and engineering tools.",
   },
 ];
