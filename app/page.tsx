@@ -41,7 +41,7 @@ const divisions = [
   {
     eyebrow: "Axion Manufacturing",
     title: "Rapid prototyping and industry solutions with local support.",
-    text: "Axion Manufacturing helps customers move from model, drawing, or rough concept to physical prototype with fast iteration, direct updates, and practical design-for-manufacturing input.",
+    text: "Axion Manufacturing helps customers move from model, drawing, or rough concept to physical prototype with fast iteration, direct updates, and practical design-for-manufacturing input from the people doing the work.",
     href: "/axion-manufacturing",
     cta: "Explore Manufacturing",
     image: "/images/generated/laser-cutting-metal.png",
@@ -49,7 +49,7 @@ const divisions = [
   {
     eyebrow: "Axion AI",
     title: "Business AI, embedded AI, robotics, and software tools.",
-    text: "Axion AI builds applied AI systems for business operations and technical products, including automation, embedded intelligence, robotics support, and engineering software.",
+    text: "Axion AI builds applied AI systems for business operations and technical products, using modern tools where they genuinely improve automation, embedded intelligence, robotics support, and engineering software.",
     href: "/axion-ai",
     cta: "Explore Axion AI",
     image: "/images/generated/robotics-automation-cell.png",
@@ -99,8 +99,8 @@ const industries = [
 
 const stats = [
   { value: "3", label: "Specialized Axion divisions" },
-  { value: "24-48h", label: "Typical first response window" },
-  { value: "AI + human", label: "Accelerated design review model" },
+  { value: "Direct", label: "Access to the people doing the work" },
+  { value: "AI + human", label: "Modern tools with engineering review" },
   { value: "Prototype-first", label: "Execution philosophy" },
 ];
 
@@ -173,8 +173,9 @@ export default function Home() {
               Where ideas become innovation.
             </h1>
             <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-200 sm:text-2xl">
-              We utilize AI with human review to design, build, and scale
-              technology solutions that move your business forward.
+              Small-team speed, direct communication, and AI-assisted
+              engineering review to design, build, and scale technology
+              solutions that move your business forward.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <PrimaryLink href="/contact" accent>
@@ -216,13 +217,14 @@ export default function Home() {
               Axion Systems
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              Human review, fast iteration, and practical engineering output.
+              Small-team speed. Purposeful AI. Practical engineering output.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              We combine AI-assisted design workflows with hands-on engineering
+              We pair modern AI-assisted workflows with hands-on engineering
               review across hardware, manufacturing, software, and
-              documentation. The result is faster movement from idea to
-              prototype without losing technical judgment.
+              documentation. Fewer layers and direct access to the technical
+              team mean faster movement from idea to prototype without losing
+              judgment.
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {["Design", "Prototype", "Scale"].map((item, index) => (
@@ -408,7 +410,8 @@ export default function Home() {
             <p className="text-lg leading-8 text-slate-300">
               Bring the concept, board, drawing, workflow, bottleneck, or
               prototype. Axion will route it to the right technical team and
-              respond with practical direction.
+              respond with practical direction, without large-firm layers
+              slowing the conversation down.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <PrimaryLink href="/contact" light>

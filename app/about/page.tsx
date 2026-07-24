@@ -46,27 +46,27 @@ const pillars: {
 }[] = [
   {
     title: "Small-Team Agility",
-    text: "Customers work directly with the people investigating, designing, and building their solution. With fewer handoffs, shorter communication paths, and less bureaucracy, we can respond quickly, adapt as requirements evolve, and keep projects moving efficiently.",
+    text: "Customers work directly with the people investigating, designing, and building their solution. Fewer handoffs, shorter communication paths, and less bureaucracy help us respond quickly, adapt as requirements evolve, and keep projects moving.",
     icon: "agility",
   },
   {
     title: "Multidisciplinary Execution",
-    text: "Modern engineering problems rarely belong to one discipline. We consider how electrical systems, embedded software, AI, mechanical constraints, manufacturing requirements, and business goals affect one another, bringing the right capabilities together around the complete problem.",
+    text: "Modern engineering problems rarely belong to one discipline. We connect electrical systems, embedded software, AI, mechanical constraints, manufacturing needs, and business goals around the complete problem.",
     icon: "execution",
   },
   {
     title: "Purposeful Technology",
-    text: "We use modern tools, including artificial intelligence, to accelerate research, development, analysis, documentation, and workflows where they genuinely create value. We also help customers apply AI, automation, and embedded intelligence when those technologies provide a practical advantage.",
+    text: "We use modern tools, including artificial intelligence, to accelerate research, development, analysis, documentation, and delivery where they create real value. We apply AI, automation, and embedded intelligence when they provide a practical advantage.",
     icon: "technology",
   },
   {
     title: "Hands-On Problem Solving",
-    text: "Our role does not end with recommending an idea. Where appropriate, we investigate, design, prototype, test, document, and support implementation, focusing on practical, testable results that help customers move from uncertainty to action.",
+    text: "Our role does not end with recommending an idea. Where appropriate, we investigate, design, prototype, test, document, and support implementation so customers can move from uncertainty to action.",
     icon: "hands",
   },
   {
     title: "Passionate Ownership",
-    text: "Every engagement shapes our reputation, so we approach each project with curiosity, urgency, and personal responsibility. We communicate honestly, work to understand the real problem, and produce organized, maintainable work that we are proud to stand behind.",
+    text: "Every engagement shapes our reputation. We bring curiosity, urgency, and personal responsibility, communicate honestly, and produce organized, maintainable work we are proud to stand behind.",
     icon: "ownership",
   },
 ];
