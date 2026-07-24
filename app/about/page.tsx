@@ -34,32 +34,32 @@ const team = [
 
 const pillars = [
   {
-    title: "Small-Team Responsiveness",
-    text: "Customers work directly with the people investigating, designing, and building their solution. That means fewer handoffs, faster communication, and less administrative overhead.",
+    title: "Direct Access",
+    text: "Work directly with the people investigating, designing, and building the solution.",
   },
   {
-    title: "Multidisciplinary Execution",
-    text: "Modern engineering problems rarely fit into one category. Axion considers how electronics, firmware, AI, mechanical constraints, manufacturing needs, and business goals affect one another.",
+    title: "Connected Disciplines",
+    text: "Electronics, firmware, AI, mechanical constraints, manufacturing needs, and business goals considered together.",
   },
   {
     title: "Accessible Innovation",
-    text: "We help make useful technologies, including AI, modern embedded systems, automation, and rapid prototyping, more accessible to companies that may not have those resources internally.",
+    text: "Useful technologies made reachable for teams without every resource in-house.",
   },
   {
-    title: "Hands-On Problem Solving",
-    text: "Our goal is not simply to recommend an idea. Where appropriate, we investigate, design, prototype, test, document, and support implementation.",
+    title: "Hands-On Output",
+    text: "Investigate, design, prototype, test, document, and support implementation where appropriate.",
   },
   {
-    title: "Passionate Ownership",
-    text: "Every engagement shapes our reputation. We communicate honestly, work to understand the real problem, and produce work we are proud to stand behind.",
+    title: "Real Ownership",
+    text: "Honest communication, urgency, and work we are willing to stand behind.",
   },
 ];
 
 const beliefs = [
-  "Good engineering begins with understanding the actual problem.",
-  "The most advanced solution is not always the right solution.",
-  "AI should be used where it creates real value, not added for appearances.",
-  "Documentation, test results, design decisions, and knowledge transfer are part of the finished solution.",
+  "Understand the real problem first.",
+  "Use the simplest reliable solution that fits.",
+  "Apply AI only where it creates value.",
+  "Finish with documentation, test results, and knowledge transfer.",
 ];
 
 const capabilityBands = [
@@ -121,24 +121,19 @@ export default function AboutPage() {
               Core purpose
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              Making practical engineering and emerging technology more
-              accessible.
+              Practical engineering within reach.
             </h2>
           </div>
           <div className="about-purpose-copy scroll-reveal">
             <p>
-              Axion Systems helps manufacturers, product companies, and
-              engineering teams turn technical ideas and unresolved problems
-              into practical solutions. We bring electrical engineering,
-              embedded systems, AI, manufacturing, and rapid prototyping
-              together within one responsive multidisciplinary team.
+              Axion helps manufacturers, product companies, and engineering
+              teams turn technical ideas and unresolved problems into practical
+              solutions.
             </p>
             <p>
-              Many valuable technical projects stall because internal teams do
-              not have enough time, specialized resources, or the right mix of
-              disciplines to move them forward. Large firms may bring extensive
-              resources, but their cost and processes do not fit every problem.
-              Axion was created to help close that gap.
+              We bring electrical engineering, embedded systems, AI,
+              manufacturing, and rapid prototyping together within one
+              responsive team, built for focused work that needs momentum.
             </p>
           </div>
         </div>
@@ -160,20 +155,16 @@ export default function AboutPage() {
               Origin
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              A Michigan team built around overlapping technical disciplines.
+              Built in Michigan. Built across disciplines.
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-300">
               Axion Systems was founded in Michigan by a multidisciplinary team
               brought together through engineering, product development, and
-              hands-on technical work. We repeatedly saw projects stall not
-              because the problem was impossible, but because no one had the
-              time, resources, or combination of skills needed to move it
-              forward.
+              hands-on technical work.
             </p>
             <p className="mt-5 text-base leading-8 text-slate-300">
-              Each team member brings a different angle: electrical systems,
-              embedded hardware and software, manufacturing, mechanical design,
-              prototyping, and artificial intelligence. Axion exists to bring
+              We saw valuable projects stall because teams lacked time,
+              resources, or the right blend of skills. Axion exists to bring
               those capabilities together around the same problem.
             </p>
           </div>
@@ -188,13 +179,12 @@ export default function AboutPage() {
                 The five pillars
               </p>
               <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-                How Axion creates value without pretending to be a giant firm.
+                Five ways we work.
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-8 text-slate-600 lg:ml-auto">
-              Axion brings multidisciplinary engineering and emerging
-              technology within reach of companies that need practical
-              solutions without large-firm cost and bureaucracy.
+              Multidisciplinary engineering and emerging technology, without
+              unnecessary layers between the customer and the work.
             </p>
           </div>
 
@@ -220,14 +210,12 @@ export default function AboutPage() {
               Why Axion
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              Between large firms and disconnected specialists.
+              The space between.
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-300">
-              Large engineering firms offer extensive resources, but their
-              cost, processes, and project requirements do not fit every
-              company or every problem. Independent specialists can offer deep
-              experience in one area, but many modern challenges cross several
-              disciplines. Axion occupies the space between them.
+              Some projects do not fit a large engineering firm. Others cross
+              too many disciplines for one specialist. Axion is built for the
+              middle: direct, flexible, multidisciplinary support.
             </p>
           </div>
           <div className="about-market-map scroll-reveal">
@@ -254,7 +242,7 @@ export default function AboutPage() {
               What we believe
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              Useful engineering is honest, maintainable, and grounded.
+              Grounded principles.
             </h2>
           </div>
           <div className="about-belief-stack">
@@ -276,13 +264,12 @@ export default function AboutPage() {
                 Leadership
               </p>
               <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-                Directors across AI, manufacturing, and electrical systems.
+                The people closest to the work.
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-8 text-slate-300 lg:ml-auto">
-              The team is organized around hands-on delivery, not layers of
-              bureaucracy. Customers get practical direction from the people
-              closest to the technical decisions.
+              Axion is organized around hands-on delivery, direct technical
+              ownership, and short communication paths.
             </p>
           </div>
 
@@ -313,9 +300,8 @@ export default function AboutPage() {
         <div className="about-vision-card mx-auto max-w-7xl scroll-reveal">
           <p>Long-term vision</p>
           <h2>
-            Our vision is to advance industry and positively impact society by
-            turning emerging technology and multidisciplinary engineering into
-            practical, real-world solutions.
+            Advance industry by turning emerging technology into practical,
+            real-world solutions.
           </h2>
         </div>
       </section>
@@ -327,15 +313,14 @@ export default function AboutPage() {
               Company promise
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              Understand the challenge. Build the right solution. Leave the
-              customer stronger.
+              Understand the challenge. Build the right solution.
             </h2>
           </div>
           <div>
             <p className="text-base leading-8 text-slate-300">
-              A stronger customer has useful documentation, organized design
-              files, test information, maintainable solutions, and enough
-              knowledge transfer to keep moving without unnecessary dependency.
+              Leave the customer stronger through documentation, organized
+              files, test information, maintainable solutions, and knowledge
+              transfer.
             </p>
             <p className="mt-5 text-base leading-8 text-slate-300">
               Have a technical challenge or an idea that needs a path forward?

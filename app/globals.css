@@ -906,6 +906,16 @@ html {
   font-weight: 700;
 }
 
+.about-purpose-section h2,
+.about-origin-section h2,
+.about-pillars-section h2,
+.about-market-section h2,
+.about-beliefs-section h2,
+.about-team-section h2,
+.about-promise h2 {
+  max-width: 12.5em;
+}
+
 .about-purpose-section {
   position: relative;
   overflow: hidden;
