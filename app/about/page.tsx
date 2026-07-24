@@ -23,7 +23,7 @@ const team = [
   {
     name: "Breckin Helfen",
     role: "Director of Axion Manufacturing",
-    initials: "BH",
+    image: "/images/team/breckin-helfen.jpg",
   },
   {
     name: "Davis Dahmer",
@@ -115,17 +115,13 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <article className="about-team-card" key={member.name}>
                 <div className="about-team-image">
-                  {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={320}
-                      height={320}
-                      className="h-full w-full object-cover"
-                    />
-                  ) : (
-                    <span>{member.initials}</span>
-                  )}
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={320}
+                    height={320}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
                 <p className="font-mono text-xs text-yellow-300">
                   {String(index + 1).padStart(2, "0")}
