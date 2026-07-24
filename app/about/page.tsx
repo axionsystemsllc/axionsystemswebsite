@@ -91,10 +91,11 @@ function PillarIcon({ type }: { type: PillarIconType }) {
   if (type === "agility") {
     return (
       <svg aria-hidden="true" viewBox="0 0 48 48">
-        <path d="M8 24h26" />
-        <path d="m26 14 10 10-10 10" />
-        <path d="M10 13h10" />
-        <path d="M10 35h16" />
+        <path d="M8 33h15" />
+        <path d="M8 24h23" />
+        <path d="M8 15h31" />
+        <path d="m31 9 8 6-8 6" />
+        <path d="m23 18 8 6-8 6" />
       </svg>
     );
   }
@@ -102,12 +103,14 @@ function PillarIcon({ type }: { type: PillarIconType }) {
   if (type === "execution") {
     return (
       <svg aria-hidden="true" viewBox="0 0 48 48">
-        <circle cx="12" cy="14" r="4" />
-        <circle cx="36" cy="14" r="4" />
-        <circle cx="24" cy="34" r="4" />
-        <path d="M16 16.5 21 30" />
-        <path d="M32 16.5 27 30" />
-        <path d="M16 14h16" />
+        <path d="M12 13h10v10H12z" />
+        <path d="M26 13h10v10H26z" />
+        <path d="M12 27h10v10H12z" />
+        <path d="M26 27h10v10H26z" />
+        <path d="M22 18h4" />
+        <path d="M17 23v4" />
+        <path d="M31 23v4" />
+        <path d="M22 32h4" />
       </svg>
     );
   }
@@ -115,17 +118,14 @@ function PillarIcon({ type }: { type: PillarIconType }) {
   if (type === "technology") {
     return (
       <svg aria-hidden="true" viewBox="0 0 48 48">
-        <rect x="13" y="13" width="22" height="22" rx="4" />
-        <path d="M19 7v6" />
-        <path d="M29 7v6" />
-        <path d="M19 35v6" />
-        <path d="M29 35v6" />
-        <path d="M7 19h6" />
-        <path d="M7 29h6" />
-        <path d="M35 19h6" />
-        <path d="M35 29h6" />
-        <path d="M20 27h8" />
-        <path d="M22 21h4" />
+        <path d="M14 30c0-7 4-12 10-12s10 5 10 12" />
+        <path d="M18 30h12" />
+        <path d="m13 36 6-6" />
+        <path d="m35 36-6-6" />
+        <path d="M18 12h12" />
+        <path d="M24 8v8" />
+        <path d="M12 18h6" />
+        <path d="M30 18h6" />
       </svg>
     );
   }
@@ -133,18 +133,23 @@ function PillarIcon({ type }: { type: PillarIconType }) {
   if (type === "hands") {
     return (
       <svg aria-hidden="true" viewBox="0 0 48 48">
-        <path d="M16 31 31 16" />
-        <path d="m27 12 9 9" />
-        <path d="m11 36 8-3 16-16-5-5-16 16-3 8Z" />
-        <path d="M10 40h28" />
+        <path d="M16 12h16" />
+        <path d="M24 12v25" />
+        <path d="M15 37h18" />
+        <path d="M13 23h22" />
+        <path d="m13 23 5-6" />
+        <path d="m35 23-5-6" />
+        <path d="M18 23c0 5-2 8-5 8s-5-3-5-8" />
+        <path d="M40 23c0 5-2 8-5 8s-5-3-5-8" />
       </svg>
     );
   }
 
   return (
     <svg aria-hidden="true" viewBox="0 0 48 48">
-      <path d="M24 7 37 12v10c0 9-5.5 15-13 19-7.5-4-13-10-13-19V12l13-5Z" />
-      <path d="m17 24 5 5 10-11" />
+      <path d="M24 8 29 19l11 1-8 8 2 12-10-6-10 6 2-12-8-8 11-1 5-11Z" />
+      <path d="M24 19v8" />
+      <path d="M20 27h8" />
     </svg>
   );
 }
@@ -283,12 +288,16 @@ export default function AboutPage() {
                 className="about-pillar-card scroll-reveal"
                 key={pillar.title}
               >
-                <div className="about-pillar-mark">
-                  <PillarIcon type={pillar.icon} />
+                <div className="about-pillar-number">
                   <span>{String(index + 1).padStart(2, "0")}</span>
                 </div>
-                <h3>{pillar.title}</h3>
-                <p>{pillar.text}</p>
+                <div className="about-pillar-copy">
+                  <h3>{pillar.title}</h3>
+                  <p>{pillar.text}</p>
+                </div>
+                <div className="about-pillar-icon">
+                  <PillarIcon type={pillar.icon} />
+                </div>
               </article>
             ))}
           </div>
