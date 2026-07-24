@@ -833,6 +833,402 @@ html {
   transform: skewX(-18deg);
 }
 
+.about-hero-v2 {
+  min-height: 760px;
+  background: #020617;
+}
+
+.about-hero-media img {
+  animation: about-hero-drift 24s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.about-hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+  opacity: 0.62;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(118deg, transparent 0 58%, rgba(250, 204, 21, 0.18) 58.1%, transparent 58.7% 100%),
+    linear-gradient(118deg, transparent 0 72%, rgba(255, 255, 255, 0.12) 72.1%, transparent 72.7% 100%);
+  background-size: 86px 86px, 86px 86px, auto, auto;
+  mask-image: linear-gradient(90deg, #000 0%, #000 72%, transparent 100%);
+}
+
+.about-hero-grid::before,
+.about-hero-grid::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transform: skewX(-18deg);
+}
+
+.about-hero-grid::before {
+  right: 8%;
+  top: 16%;
+  height: 36%;
+  width: 28%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.about-hero-grid::after {
+  right: -10%;
+  bottom: 10%;
+  height: 26%;
+  width: 42%;
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.12), transparent 58%);
+}
+
+.about-hero-panel {
+  align-self: end;
+  border-left: 3px solid var(--axion-yellow);
+  background: rgba(2, 6, 23, 0.46);
+  padding: 28px;
+  backdrop-filter: blur(16px);
+}
+
+.about-hero-panel p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.about-hero-panel span {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 11px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.about-purpose-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to right, rgba(6, 22, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+  background-size: 82px 82px, 82px 82px, auto;
+}
+
+.about-purpose-section::after {
+  content: "";
+  position: absolute;
+  right: -12%;
+  top: 12%;
+  height: 68%;
+  width: 36%;
+  pointer-events: none;
+  border-left: 1px solid rgba(6, 22, 43, 0.1);
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.16), transparent 64%);
+  transform: skewX(-18deg);
+}
+
+.about-purpose-copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 24px;
+  border-left: 4px solid var(--axion-yellow);
+  background: rgba(255, 255, 255, 0.82);
+  padding: 28px;
+  box-shadow: 0 20px 64px rgba(6, 22, 43, 0.08);
+}
+
+.about-purpose-copy p,
+.about-origin-section p {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.about-origin-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(250, 204, 21, 0.14), transparent 24%),
+    linear-gradient(135deg, #06162b 0%, #020617 72%);
+}
+
+.about-origin-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.24;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 92px 92px;
+}
+
+.about-origin-visual {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.24);
+}
+
+.about-pillars-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(112deg, transparent 0 68%, rgba(250, 204, 21, 0.14) 68.1%, transparent 68.8% 100%),
+    #ffffff;
+}
+
+.about-pillars-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.about-pillar-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5.5rem 0.52fr 1fr;
+  gap: 24px;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 26px;
+  box-shadow: 0 18px 58px rgba(6, 22, 43, 0.07);
+  transition:
+    transform 260ms ease,
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+
+.about-pillar-card::after {
+  content: "";
+  position: absolute;
+  right: -56px;
+  top: -30px;
+  height: 150px;
+  width: 110px;
+  background: rgba(250, 204, 21, 0.2);
+  transform: skewX(-18deg);
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 28px 82px rgba(6, 22, 43, 0.12);
+}
+
+.about-pillar-card span {
+  color: #2563eb;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.about-pillar-card h3 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.about-pillar-card p {
+  color: #475569;
+  line-height: 1.75;
+}
+
+.about-market-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 18%, rgba(37, 99, 235, 0.22), transparent 28%),
+    linear-gradient(135deg, #020617 0%, #06162b 66%, #020617 100%);
+}
+
+.about-market-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 86px 86px;
+}
+
+.about-market-map {
+  position: relative;
+  display: grid;
+  gap: 18px;
+}
+
+.about-market-map::before {
+  content: "";
+  position: absolute;
+  left: 34px;
+  top: 34px;
+  bottom: 34px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--axion-yellow), rgba(255, 255, 255, 0.18));
+}
+
+.about-market-map div {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  padding: 24px 24px 24px 76px;
+  backdrop-filter: blur(12px);
+}
+
+.about-market-map div::before {
+  content: "";
+  position: absolute;
+  left: 23px;
+  top: 28px;
+  height: 24px;
+  width: 24px;
+  border: 5px solid #020617;
+  border-radius: 999px;
+  background: var(--axion-yellow);
+  box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.65);
+}
+
+.about-market-map span {
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.about-market-map p {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.65;
+}
+
+.about-beliefs-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to right, rgba(6, 22, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  background-size: 82px 82px, 82px 82px, auto;
+}
+
+.about-belief-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.about-belief-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: center;
+  border-left: 4px solid var(--axion-yellow);
+  background: white;
+  padding: 22px;
+  box-shadow: 0 18px 56px rgba(6, 22, 43, 0.08);
+}
+
+.about-belief-card span {
+  color: #2563eb;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 900;
+}
+
+.about-belief-card p {
+  color: #334155;
+  line-height: 1.65;
+}
+
+.about-vision-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(112deg, transparent 0 62%, rgba(250, 204, 21, 0.18) 62.1%, transparent 62.8% 100%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.about-vision-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  box-shadow: 0 24px 78px rgba(6, 22, 43, 0.1);
+}
+
+.about-vision-card::after {
+  content: "";
+  position: absolute;
+  right: -8%;
+  top: 0;
+  height: 100%;
+  width: 36%;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.1), transparent 52%),
+    linear-gradient(135deg, transparent 0 48%, rgba(250, 204, 21, 0.28) 48.2%, transparent 49% 100%);
+  transform: skewX(-18deg);
+}
+
+.about-vision-card p {
+  position: relative;
+  z-index: 1;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.about-vision-card h2 {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  max-width: 58rem;
+  font-size: clamp(2rem, 5vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.about-promise {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(250, 204, 21, 0.14), transparent 26%),
+    linear-gradient(135deg, #06162b 0%, #020617 72%);
+}
+
+.about-promise::after {
+  content: "";
+  position: absolute;
+  right: -8%;
+  top: 0;
+  height: 100%;
+  width: 34%;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  transform: skewX(-18deg);
+}
+
+@keyframes about-hero-drift {
+  from {
+    transform: scale(1.01) translate3d(-0.5%, 0, 0);
+  }
+
+  to {
+    transform: scale(1.06) translate3d(0.7%, -0.6%, 0);
+  }
+}
+
 .projects-featured {
   position: relative;
   overflow: hidden;
@@ -1254,6 +1650,83 @@ html {
     max-height: 280px;
   }
 
+  .about-hero-v2 {
+    min-height: 650px;
+  }
+
+  .about-hero-v2 > div:last-child {
+    min-height: 560px;
+  }
+
+  .about-hero-grid {
+    opacity: 0.42;
+    background-size: 56px 56px, 56px 56px, auto, auto;
+  }
+
+  .about-hero-grid::before,
+  .about-hero-grid::after {
+    opacity: 0.5;
+    right: -28%;
+    width: 78vw;
+  }
+
+  .about-hero-panel,
+  .about-purpose-copy,
+  .about-market-map div,
+  .about-vision-card,
+  .about-promise {
+    padding: 1.5rem;
+  }
+
+  .about-hero-panel p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .about-origin-visual {
+    min-height: 320px;
+    clip-path: none;
+    border-radius: 16px;
+  }
+
+  .about-pillar-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .about-pillar-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .about-market-map::before {
+    left: 22px;
+  }
+
+  .about-market-map div {
+    padding-left: 58px;
+  }
+
+  .about-market-map div::before {
+    left: 12px;
+  }
+
+  .about-belief-card {
+    align-items: start;
+    padding: 18px;
+  }
+
+  .about-vision-card h2 {
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+
+  .about-purpose-section::after,
+  .about-vision-card::after,
+  .about-promise::after {
+    opacity: 0.36;
+  }
+
   .about-cta,
   .projects-cta {
     padding: 1.5rem;
@@ -1333,6 +1806,7 @@ html {
   .green-particles::after,
   .scroll-reveal,
   .hero-motion img,
+  .about-hero-media img,
   .hero-geometry::before,
   .hero-geometry::after {
     animation: none;
