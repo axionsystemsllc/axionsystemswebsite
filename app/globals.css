@@ -475,6 +475,66 @@ html {
     linear-gradient(118deg, transparent 0 22%, rgba(255, 255, 255, 0.1) 22.2%, transparent 22.8% 100%);
 }
 
+.branch-section.is-final-branch {
+  padding-bottom: 7.25rem;
+}
+
+.branch-section.is-final-branch::after {
+  content: "";
+  position: absolute;
+  inset: auto -6% -1px -6%;
+  height: 94px;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 0 28%, rgba(250, 204, 21, 0.9) 28.2%, rgba(250, 204, 21, 0.9) 29.2%, transparent 29.4% 100%),
+    linear-gradient(115deg, transparent 0 63%, rgba(6, 22, 43, 0.92) 63.2%, rgba(6, 22, 43, 0.92) 66.8%, transparent 67% 100%),
+    linear-gradient(180deg, transparent 0%, rgba(241, 245, 249, 0.98) 72%);
+  clip-path: polygon(0 44%, 100% 0, 100% 100%, 0 100%);
+}
+
+.home-industries-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-top: 6.25rem;
+  border-top: 0;
+  background:
+    radial-gradient(circle at 10% 6%, rgba(37, 99, 235, 0.1), transparent 25%),
+    linear-gradient(180deg, #eef3f8 0%, #f1f5f9 45%, #eef3f8 100%);
+}
+
+.home-industries-section::before,
+.home-industries-section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.home-industries-section::before {
+  inset: 0;
+  z-index: -2;
+  opacity: 0.48;
+  background:
+    linear-gradient(to right, rgba(6, 22, 43, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.045) 1px, transparent 1px);
+  background-size: 82px 82px;
+  mask-image: linear-gradient(180deg, transparent 0, #000 18%, #000 100%);
+}
+
+.home-industries-section::after {
+  right: -9%;
+  top: 0;
+  z-index: -1;
+  width: min(52vw, 720px);
+  height: 240px;
+  border-left: 1px solid rgba(6, 22, 43, 0.12);
+  background:
+    linear-gradient(115deg, rgba(250, 204, 21, 0.38) 0 2%, transparent 2.4% 100%),
+    linear-gradient(115deg, rgba(6, 22, 43, 0.13), transparent 64%);
+  transform: skewX(-18deg);
+}
+
 .branch-image-frame {
   border-radius: 0;
   clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
@@ -1130,6 +1190,26 @@ html {
   .branch-image-frame,
   .division-hero-image {
     min-height: 300px;
+  }
+
+  .branch-section.is-final-branch {
+    padding-bottom: 5.25rem;
+  }
+
+  .branch-section.is-final-branch::after {
+    height: 62px;
+    inset-inline: -14%;
+  }
+
+  .home-industries-section {
+    padding-top: 4.75rem;
+  }
+
+  .home-industries-section::after {
+    right: -36%;
+    width: 92vw;
+    height: 150px;
+    opacity: 0.7;
   }
 
   .projects-featured-image {

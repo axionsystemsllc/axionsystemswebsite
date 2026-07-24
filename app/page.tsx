@@ -310,7 +310,9 @@ export default function Home() {
 
         return (
           <section
-            className={`scroll-reveal branch-section px-5 py-16 sm:px-6 lg:px-8 lg:py-24 ${
+            className={`scroll-reveal branch-section ${
+              index === divisions.length - 1 ? "is-final-branch" : ""
+            } px-5 py-16 sm:px-6 lg:px-8 lg:py-24 ${
               dark ? "is-dark bg-slate-950 text-white" : "bg-white text-slate-950"
             }`}
             key={division.eyebrow}
@@ -368,7 +370,7 @@ export default function Home() {
         );
       })}
 
-      <section className="scroll-reveal bg-slate-100 px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <section className="scroll-reveal home-industries-section bg-slate-100 px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
