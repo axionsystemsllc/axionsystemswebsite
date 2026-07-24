@@ -32,26 +32,42 @@ const team = [
   },
 ];
 
-const pillars = [
+type PillarIconType =
+  | "agility"
+  | "execution"
+  | "technology"
+  | "hands"
+  | "ownership";
+
+const pillars: {
+  title: string;
+  text: string;
+  icon: PillarIconType;
+}[] = [
   {
-    title: "Direct Access",
-    text: "Work directly with the people investigating, designing, and building the solution.",
+    title: "Small-Team Agility",
+    text: "Customers work directly with the people investigating, designing, and building their solution. With fewer handoffs, shorter communication paths, and less bureaucracy, we can respond quickly, adapt as requirements evolve, and keep projects moving efficiently.",
+    icon: "agility",
   },
   {
-    title: "Connected Disciplines",
-    text: "Electronics, firmware, AI, mechanical constraints, manufacturing needs, and business goals considered together.",
+    title: "Multidisciplinary Execution",
+    text: "Modern engineering problems rarely belong to one discipline. We consider how electrical systems, embedded software, AI, mechanical constraints, manufacturing requirements, and business goals affect one another, bringing the right capabilities together around the complete problem.",
+    icon: "execution",
   },
   {
-    title: "Accessible Innovation",
-    text: "Useful technologies made reachable for teams without every resource in-house.",
+    title: "Purposeful Technology",
+    text: "We use modern tools, including artificial intelligence, to accelerate research, development, analysis, documentation, and workflows where they genuinely create value. We also help customers apply AI, automation, and embedded intelligence when those technologies provide a practical advantage.",
+    icon: "technology",
   },
   {
-    title: "Hands-On Output",
-    text: "Investigate, design, prototype, test, document, and support implementation where appropriate.",
+    title: "Hands-On Problem Solving",
+    text: "Our role does not end with recommending an idea. Where appropriate, we investigate, design, prototype, test, document, and support implementation, focusing on practical, testable results that help customers move from uncertainty to action.",
+    icon: "hands",
   },
   {
-    title: "Real Ownership",
-    text: "Honest communication, urgency, and work we are willing to stand behind.",
+    title: "Passionate Ownership",
+    text: "Every engagement shapes our reputation, so we approach each project with curiosity, urgency, and personal responsibility. We communicate honestly, work to understand the real problem, and produce organized, maintainable work that we are proud to stand behind.",
+    icon: "ownership",
   },
 ];
 
@@ -70,6 +86,68 @@ const capabilityBands = [
   "Manufacturing support",
   "Product development",
 ];
+
+function PillarIcon({ type }: { type: PillarIconType }) {
+  if (type === "agility") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 48 48">
+        <path d="M8 24h26" />
+        <path d="m26 14 10 10-10 10" />
+        <path d="M10 13h10" />
+        <path d="M10 35h16" />
+      </svg>
+    );
+  }
+
+  if (type === "execution") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 48 48">
+        <circle cx="12" cy="14" r="4" />
+        <circle cx="36" cy="14" r="4" />
+        <circle cx="24" cy="34" r="4" />
+        <path d="M16 16.5 21 30" />
+        <path d="M32 16.5 27 30" />
+        <path d="M16 14h16" />
+      </svg>
+    );
+  }
+
+  if (type === "technology") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 48 48">
+        <rect x="13" y="13" width="22" height="22" rx="4" />
+        <path d="M19 7v6" />
+        <path d="M29 7v6" />
+        <path d="M19 35v6" />
+        <path d="M29 35v6" />
+        <path d="M7 19h6" />
+        <path d="M7 29h6" />
+        <path d="M35 19h6" />
+        <path d="M35 29h6" />
+        <path d="M20 27h8" />
+        <path d="M22 21h4" />
+      </svg>
+    );
+  }
+
+  if (type === "hands") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 48 48">
+        <path d="M16 31 31 16" />
+        <path d="m27 12 9 9" />
+        <path d="m11 36 8-3 16-16-5-5-16 16-3 8Z" />
+        <path d="M10 40h28" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg aria-hidden="true" viewBox="0 0 48 48">
+      <path d="M24 7 37 12v10c0 9-5.5 15-13 19-7.5-4-13-10-13-19V12l13-5Z" />
+      <path d="m17 24 5 5 10-11" />
+    </svg>
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -101,9 +179,12 @@ export default function AboutPage() {
           </div>
           <div className="about-hero-panel scroll-reveal">
             <p>
-              Axion Systems brings engineering, emerging technology, and
-              hands-on problem solving together to help companies move valuable
-              technical projects forward.
+              Multidisciplinary engineering and modern technology, delivered
+              with the speed, flexibility, and ownership of a small team.
+            </p>
+            <p className="about-hero-support">
+              We help companies move technical projects from problem or idea to
+              practical implementation, without large-firm bureaucracy.
             </p>
             <div className="mt-7 flex flex-wrap gap-2">
               {capabilityBands.map((item) => (
@@ -126,15 +207,20 @@ export default function AboutPage() {
           </div>
           <div className="about-purpose-copy scroll-reveal">
             <p>
-              Axion helps manufacturers, product companies, and engineering
-              teams turn technical ideas and unresolved problems into practical
-              solutions.
+              Axion Systems helps manufacturers, product companies, and
+              engineering teams turn technical ideas and unresolved problems
+              into practical, working solutions.
             </p>
             <p>
-              We bring electrical engineering, embedded systems, AI,
-              manufacturing, and rapid prototyping together within one
-              responsive team, built for focused work that needs momentum.
+              Our small, multidisciplinary team combines electrical engineering,
+              embedded systems, AI, manufacturing, and rapid prototyping, giving
+              customers direct access to the people doing the work.
             </p>
+            <div className="about-purpose-note">
+              We move quickly, communicate directly, and use modern AI tools
+              where they genuinely improve research, development,
+              documentation, or delivery.
+            </div>
           </div>
         </div>
       </section>
@@ -179,12 +265,15 @@ export default function AboutPage() {
                 The five pillars
               </p>
               <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-                Five ways we work.
+                How Axion creates value where it matters.
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-8 text-slate-600 lg:ml-auto">
-              Multidisciplinary engineering and emerging technology, without
-              unnecessary layers between the customer and the work.
+              Axion brings multidisciplinary engineering and emerging technology
+              within reach of companies that need practical solutions. Our
+              small-team structure allows us to work directly, move efficiently,
+              and avoid the administrative layers that slow larger
+              organizations.
             </p>
           </div>
 
@@ -194,7 +283,10 @@ export default function AboutPage() {
                 className="about-pillar-card scroll-reveal"
                 key={pillar.title}
               >
-                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div className="about-pillar-mark">
+                  <PillarIcon type={pillar.icon} />
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                </div>
                 <h3>{pillar.title}</h3>
                 <p>{pillar.text}</p>
               </article>
@@ -210,12 +302,14 @@ export default function AboutPage() {
               Why Axion
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              The space between.
+              Built for the work that needs momentum.
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-300">
               Some projects do not fit a large engineering firm. Others cross
               too many disciplines for one specialist. Axion is built for the
-              middle: direct, flexible, multidisciplinary support.
+              middle: direct access, flexible support, and practical execution
+              without the cost, delays, and bureaucracy of a large engineering
+              firm.
             </p>
           </div>
           <div className="about-market-map scroll-reveal">

@@ -896,6 +896,13 @@ html {
   line-height: 1.75;
 }
 
+.about-hero-panel .about-hero-support {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
 .about-hero-panel span {
   display: inline-flex;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -937,6 +944,9 @@ html {
   border-left: 1px solid rgba(6, 22, 43, 0.1);
   background: linear-gradient(135deg, rgba(250, 204, 21, 0.16), transparent 64%);
   transform: skewX(-18deg);
+  animation: about-side-drift linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 78%;
 }
 
 .about-purpose-copy {
@@ -954,6 +964,15 @@ html {
 .about-origin-section p {
   font-size: 1rem;
   line-height: 1.85;
+}
+
+.about-purpose-note {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 22px;
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.75;
 }
 
 .about-origin-section {
@@ -984,6 +1003,13 @@ html {
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.24);
 }
 
+.about-origin-visual img {
+  animation: about-image-parallax linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 100%;
+  transform-origin: center;
+}
+
 .about-pillars-section {
   position: relative;
   overflow: hidden;
@@ -1000,7 +1026,7 @@ html {
 .about-pillar-card {
   position: relative;
   display: grid;
-  grid-template-columns: 5.5rem 0.52fr 1fr;
+  grid-template-columns: 6rem 0.52fr 1fr;
   gap: 24px;
   align-items: center;
   overflow: hidden;
@@ -1009,9 +1035,12 @@ html {
   padding: 26px;
   box-shadow: 0 18px 58px rgba(6, 22, 43, 0.07);
   transition:
-    transform 260ms ease,
+    translate 260ms ease,
     box-shadow 260ms ease,
     border-color 260ms ease;
+  animation: about-card-flow linear both;
+  animation-timeline: view();
+  animation-range: entry 4% cover 34%;
 }
 
 .about-pillar-card::after {
@@ -1026,12 +1055,36 @@ html {
 }
 
 .about-pillar-card:hover {
-  transform: translateY(-4px);
+  translate: 0 -4px;
   border-color: #cbd5e1;
   box-shadow: 0 28px 82px rgba(6, 22, 43, 0.12);
 }
 
-.about-pillar-card span {
+.about-pillar-mark {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
+.about-pillar-mark svg {
+  height: 46px;
+  width: 46px;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  background:
+    linear-gradient(135deg, rgba(250, 204, 21, 0.32), transparent 58%),
+    #f8fafc;
+  padding: 10px;
+  stroke: #06162b;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  box-shadow: 0 16px 34px rgba(6, 22, 43, 0.08);
+}
+
+.about-pillar-mark span {
   color: #2563eb;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.95rem;
@@ -1039,6 +1092,8 @@ html {
 }
 
 .about-pillar-card h3 {
+  position: relative;
+  z-index: 1;
   font-size: 1.55rem;
   font-weight: 800;
   line-height: 1.08;
@@ -1046,6 +1101,8 @@ html {
 }
 
 .about-pillar-card p {
+  position: relative;
+  z-index: 1;
   color: #475569;
   line-height: 1.75;
 }
@@ -1084,6 +1141,10 @@ html {
   bottom: 34px;
   width: 2px;
   background: linear-gradient(180deg, var(--axion-yellow), rgba(255, 255, 255, 0.18));
+  transform-origin: top;
+  animation: about-line-grow linear both;
+  animation-timeline: view();
+  animation-range: entry 16% cover 54%;
 }
 
 .about-market-map div {
@@ -1186,6 +1247,9 @@ html {
     linear-gradient(135deg, rgba(37, 99, 235, 0.1), transparent 52%),
     linear-gradient(135deg, transparent 0 48%, rgba(250, 204, 21, 0.28) 48.2%, transparent 49% 100%);
   transform: skewX(-18deg);
+  animation: about-side-drift linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 78%;
 }
 
 .about-vision-card p {
@@ -1236,6 +1300,46 @@ html {
 
   to {
     transform: scale(1.06) translate3d(0.7%, -0.6%, 0);
+  }
+}
+
+@keyframes about-side-drift {
+  from {
+    opacity: 0.15;
+    transform: translate3d(70px, 0, 0) skewX(-18deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-26px, 0, 0) skewX(-18deg);
+  }
+}
+
+@keyframes about-image-parallax {
+  from {
+    transform: scale(1.08) translate3d(0, -22px, 0);
+  }
+  to {
+    transform: scale(1.02) translate3d(0, 24px, 0);
+  }
+}
+
+@keyframes about-card-flow {
+  from {
+    opacity: 0.55;
+    transform: translate3d(0, 26px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes about-line-grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
   }
 }
 
@@ -1705,6 +1809,17 @@ html {
     padding: 20px;
   }
 
+  .about-pillar-mark {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-pillar-mark svg {
+    height: 42px;
+    width: 42px;
+  }
+
   .about-pillar-card h3 {
     font-size: 1.35rem;
   }
@@ -1817,6 +1932,11 @@ html {
   .scroll-reveal,
   .hero-motion img,
   .about-hero-media img,
+  .about-origin-visual img,
+  .about-pillar-card,
+  .about-purpose-section::after,
+  .about-market-map::before,
+  .about-vision-card::after,
   .hero-geometry::before,
   .hero-geometry::after {
     animation: none;
