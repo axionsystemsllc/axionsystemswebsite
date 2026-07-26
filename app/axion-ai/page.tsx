@@ -39,28 +39,32 @@ const capabilityCards = [
   {
     title: "Business AI",
     text: "Internal assistants, workflow automation, document support, and data-aware tools for daily operations.",
+    tone: "blue",
   },
   {
     title: "Technical Software",
     text: "Dashboards, control interfaces, engineering utilities, and software that connects teams to real system data.",
+    tone: "violet",
   },
   {
     title: "Embedded Intelligence",
     text: "AI and decision logic for sensors, robotics, edge devices, and connected technical products.",
+    tone: "green",
   },
   {
     title: "AI Documentation",
     text: "Structured handoffs, test notes, training materials, lab support, and faster technical writing with human review.",
+    tone: "steel",
   },
 ];
 
 const orbitItems = [
-  "AI strategy",
+  "AI",
+  "Embedded",
+  "Data",
+  "Human review",
   "Automation",
-  "Dashboards",
-  "Embedded systems",
-  "Robotics",
-  "Education tools",
+  "Education",
 ];
 
 export default function AxionAIPage() {
@@ -165,7 +169,11 @@ export default function AxionAIPage() {
 
           <div className="ai-capability-grid">
             {capabilityCards.map((capability, index) => (
-              <article className="ai-capability-card" key={capability.title}>
+              <article
+                className={`ai-capability-card ai-capability-card-${capability.tone}`}
+                key={capability.title}
+              >
+                <div aria-hidden className="ai-card-signal" />
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{capability.title}</h3>
                 <p>{capability.text}</p>
@@ -178,6 +186,10 @@ export default function AxionAIPage() {
       <section className="ai-orbit-section relative z-10 overflow-hidden px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1fr] lg:items-center">
           <div className="ai-orbit">
+            <div className="ai-orbit-core">
+              <strong>Practical</strong>
+              <span>Intelligence</span>
+            </div>
             {orbitItems.map((item, index) => (
               <span key={item} style={{ "--orbit-index": index } as CSSProperties}>
                 {item}
@@ -200,9 +212,10 @@ export default function AxionAIPage() {
         </div>
       </section>
 
-      <section className="ai-coming-section relative z-10 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <section className="ai-coming-section ai-product-reveal relative z-10 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div aria-hidden className="ai-coming-orb" />
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1fr] lg:items-center">
-          <div className="ai-coming-logo">
+          <div className="ai-coming-logo ai-product-card">
             <Image
               src="/images/enginuity-workspace-logo.png"
               alt="Enginuity Workspace logo"
@@ -211,8 +224,8 @@ export default function AxionAIPage() {
               className="h-auto w-full"
             />
           </div>
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-700">
+          <div className="ai-coming-copy">
+            <p className="ai-coming-eyebrow">
               Coming soon
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
@@ -224,7 +237,7 @@ export default function AxionAIPage() {
               experiments, technical concepts, documentation, and lab workflows
               with guided support.
             </p>
-            <div className="mt-7 flex flex-wrap gap-2">
+            <div className="ai-coming-tags mt-7 flex flex-wrap gap-2">
               {[
                 "STEM labs",
                 "Higher education",
@@ -240,21 +253,24 @@ export default function AxionAIPage() {
         </div>
       </section>
 
-      <section className="ai-cta-section relative z-10 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <section className="ai-cta-section ai-final-launch relative z-10 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div aria-hidden className="ai-cta-lines" />
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-center">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               Ready to build
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              Bring the workflow, product, or technical bottleneck.
+              Have an AI workflow, product idea, or technical bottleneck worth
+              building?
             </h2>
           </div>
           <div className="ai-cta-panel">
             <p>
-              We will help identify where AI, automation, software, or embedded
-              intelligence can create practical value, then shape a buildable
-              next step.
+              Bring us the messy workflow, lab challenge, embedded system, or
+              software problem. We will help identify where AI, automation,
+              software, or embedded intelligence can create practical value,
+              then shape a buildable next step.
             </p>
             <Link className="ai-primary-link mt-7" href="/contact">
               Innovate with us <span aria-hidden>&rsaquo;</span>
