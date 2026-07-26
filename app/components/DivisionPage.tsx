@@ -11,6 +11,13 @@ type Project = {
 type DivisionPageProps = {
   accent: string;
   capabilities: string[];
+  comingSoon?: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    image: string;
+    tags: string[];
+  };
   division: string;
   heroImage: string;
   intro: string;
@@ -22,6 +29,7 @@ type DivisionPageProps = {
 export function DivisionPage({
   accent,
   capabilities,
+  comingSoon,
   division,
   heroImage,
   intro,
@@ -93,6 +101,40 @@ export function DivisionPage({
           </div>
         </div>
       </section>
+
+      {comingSoon ? (
+        <section className="division-coming-soon relative z-10 px-5 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-center">
+            <div className="division-coming-logo">
+              <Image
+                src={comingSoon.image}
+                alt={`${comingSoon.title} logo`}
+                width={220}
+                height={220}
+                className="h-auto w-full"
+              />
+            </div>
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-700">
+                {comingSoon.eyebrow}
+              </p>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
+                {comingSoon.title}
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                {comingSoon.text}
+              </p>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {comingSoon.tags.map((tag) => (
+                  <span className="division-coming-tag" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section
         className={`relative z-10 px-5 py-16 text-white sm:px-6 lg:px-8 lg:py-20 ${accent}`}

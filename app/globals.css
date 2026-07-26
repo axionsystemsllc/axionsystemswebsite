@@ -561,6 +561,82 @@ html {
   clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
 }
 
+.division-coming-soon {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 13% 22%, rgba(16, 185, 129, 0.12), transparent 24%),
+    linear-gradient(112deg, transparent 0 68%, rgba(37, 99, 235, 0.1) 68.1%, transparent 68.8% 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 250, 252, 0.96));
+}
+
+.division-coming-soon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.56;
+  background:
+    linear-gradient(to right, rgba(6, 22, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 22, 43, 0.04) 1px, transparent 1px);
+  background-size: 84px 84px;
+}
+
+.division-coming-soon::after {
+  content: "";
+  position: absolute;
+  right: -8%;
+  top: 12%;
+  height: 72%;
+  width: 28%;
+  border-left: 1px solid rgba(6, 22, 43, 0.08);
+  background: rgba(16, 185, 129, 0.08);
+  transform: skewX(-18deg);
+}
+
+.division-coming-soon > div {
+  position: relative;
+  z-index: 1;
+}
+
+.division-coming-logo {
+  position: relative;
+  display: grid;
+  min-height: 360px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #dbeafe;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.14), transparent 38%),
+    linear-gradient(135deg, white, #eff6ff);
+  padding: clamp(2rem, 6vw, 4.5rem);
+  box-shadow: 0 28px 86px rgba(6, 22, 43, 0.1);
+}
+
+.division-coming-logo::after {
+  content: "";
+  position: absolute;
+  inset: 11%;
+  border: 1px solid rgba(8, 145, 178, 0.18);
+  transform: skewX(-14deg);
+}
+
+.division-coming-logo img {
+  position: relative;
+  z-index: 1;
+  max-width: 220px;
+  filter: drop-shadow(0 20px 36px rgba(6, 22, 43, 0.18));
+}
+
+.division-coming-tag {
+  display: inline-flex;
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  background: rgba(240, 253, 250, 0.84);
+  padding: 8px 11px;
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
 .services-page-hero,
 .projects-hero,
 .about-hero {

@@ -19,6 +19,18 @@ export default function AxionAIPage() {
         "AI-assisted documentation and operations",
         "Enginuity Workspace development",
       ]}
+      comingSoon={{
+        eyebrow: "Coming soon",
+        title: "Enginuity Workspace",
+        text: "An educational AI teaching assistant for STEM laboratory classes in higher education, built to help students work through experiments, technical concepts, documentation, and lab workflows with guided support.",
+        image: "/images/enginuity-workspace-logo.png",
+        tags: [
+          "STEM labs",
+          "Higher education",
+          "AI teaching assistant",
+          "Guided technical learning",
+        ],
+      }}
       division="Axion AI"
       heroImage="/images/generated/prototype-robotics-bench.png"
       intro="AI systems for businesses, embedded products, and engineering teams."
