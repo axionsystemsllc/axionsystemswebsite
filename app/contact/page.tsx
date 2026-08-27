@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SiteHeader } from "../components/SiteHeader";
 import { ContactForm } from "./ContactForm";
 
@@ -39,6 +40,53 @@ export default function ContactPage() {
           </div>
 
           <ContactForm />
+        </div>
+      </section>
+
+      <section className="contact-locations-section px-5 pb-20 sm:px-6 lg:px-8 lg:pb-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 grid gap-5 lg:grid-cols-[0.7fr_1fr] lg:items-end">
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
+                Locations
+              </p>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
+                Local engineering support in Southeast Michigan.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-8 text-slate-600 lg:ml-auto">
+              Warren is our primary location for meetings, coordination, and
+              manufacturing-facing work. Auburn Hills supports additional
+              engineering and project activity.
+            </p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
+            <article className="contact-location-card is-primary">
+              <Image
+                src="/images/real/warren-lobby.png"
+                alt="Axion Systems Warren location lobby"
+                fill
+                sizes="(max-width: 1024px) 100vw, 58vw"
+                className="object-cover"
+              />
+              <span className="contact-location-shade" />
+              <div>
+                <p>Primary location</p>
+                <h3>Warren, Michigan</h3>
+                <address>21275 Mullin Avenue, Warren, MI 48089</address>
+              </div>
+            </article>
+
+            <article className="contact-location-card is-secondary">
+              <div className="contact-location-pattern" />
+              <div>
+                <p>Secondary location</p>
+                <h3>Auburn Hills, Michigan</h3>
+                <address>Engineering and project support location</address>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>

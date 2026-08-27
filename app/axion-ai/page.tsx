@@ -58,6 +58,19 @@ const capabilityCards = [
   },
 ];
 
+const realWorkCards = [
+  {
+    title: "Software tied to real hardware",
+    text: "Debug benches, instruments, and code stay connected so AI and software support actual technical workflows.",
+    image: "/images/real/electronics-debug-bench.png",
+  },
+  {
+    title: "Simulation and engineering support",
+    text: "Analysis, documentation, and technical reasoning help teams move from messy evidence to practical decisions.",
+    image: "/images/real/antenna-simulation-bench.png",
+  },
+];
+
 const orbitItems = [
   "AI",
   "Embedded",
@@ -143,6 +156,45 @@ export default function AxionAIPage() {
                 <span>{step.kicker}</span>
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="ai-real-work-section relative z-10 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 grid gap-6 lg:grid-cols-[0.78fr_1fr] lg:items-end">
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
+                Real technical context
+              </p>
+              <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
+                Intelligence grounded in the workbench.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-8 text-slate-300 lg:ml-auto">
+              The best software and AI work starts with the actual system:
+              instruments, source code, simulation results, documentation, and
+              the people responsible for making it all work.
+            </p>
+          </div>
+
+          <div className="ai-real-work-grid">
+            {realWorkCards.map((card) => (
+              <article className="ai-real-work-card" key={card.title}>
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <span className="ai-real-work-shade" />
+                <div>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </div>
               </article>
             ))}
           </div>

@@ -234,7 +234,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.78fr] lg:items-center">
           <div className="about-origin-visual scroll-reveal">
             <Image
-              src="/images/generated/warm-electronics-bench.png"
+              src="/images/real/electronics-debug-bench.png"
               alt="Electronics prototyping bench"
               fill
               sizes="(max-width: 1024px) 100vw, 52vw"

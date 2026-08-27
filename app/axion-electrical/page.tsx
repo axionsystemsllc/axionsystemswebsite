@@ -20,24 +20,24 @@ export default function AxionElectricalPage() {
         "Hardware documentation and review",
       ]}
       division="Axion Electrical"
-      heroImage="/images/generated/warm-electronics-bench.png"
+      heroImage="/images/real/electronics-debug-bench.png"
       intro="Electrical design for boards, systems, and field-ready hardware."
       overview="Axion Electrical supports PCB work, electronics integration, wiring, troubleshooting, and hardware decisions that need a clean path from bench testing to usable product behavior."
       projects={[
         {
           title: "Flight computer PCB",
           text: "Compact embedded electronics with sensor interfaces, power regulation, telemetry support, and review-ready schematic artifacts.",
-          image: "/images/real-projects/flight-computer-pcb-bench.png",
+          image: "/images/real/tank-vision-pcb.png",
         },
         {
           title: "Industrial product electronics",
           text: "Board-level design, Ethernet-facing hardware, connector access, and enclosure-aware electronics packaging.",
-          image: "/images/generated/warm-electronics-bench.png",
+          image: "/images/real/tank-vision-exploded.png",
         },
         {
           title: "Schematic and hardware review",
           text: "Electrical documentation that supports debugging, manufacturing, maintenance, and long-term system clarity.",
-          image: "/images/real-projects/flight-computer-schematic.jpg",
+          image: "/images/real/antenna-simulation-bench.png",
         },
       ]}
       shortName="Electrical"

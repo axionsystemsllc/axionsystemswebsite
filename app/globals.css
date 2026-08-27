@@ -1103,6 +1103,82 @@ html {
   animation-delay: calc(var(--orbit-index) * -0.7s);
 }
 
+.ai-real-work-section {
+  overflow: hidden;
+  background:
+    linear-gradient(115deg, transparent 0 62%, rgba(14, 165, 233, 0.08) 62.2%, transparent 63%),
+    radial-gradient(circle at 84% 16%, rgba(45, 212, 191, 0.14), transparent 28%),
+    #020617;
+}
+
+.ai-real-work-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .ai-real-work-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.ai-real-work-card {
+  position: relative;
+  min-height: clamp(360px, 48vw, 560px);
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: #0f172a;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+  transform-origin: center;
+  animation: ai-real-work-rise linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 62%;
+}
+
+.ai-real-work-card:nth-child(2) {
+  margin-top: clamp(0rem, 6vw, 5rem);
+  animation-range: entry 6% cover 66%;
+}
+
+.ai-real-work-card img {
+  transition: transform 1s ease, filter 1s ease;
+}
+
+.ai-real-work-card:hover img {
+  filter: saturate(1.05) contrast(1.04);
+  transform: scale(1.035);
+}
+
+.ai-real-work-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 32%, rgba(2, 6, 23, 0.88)),
+    linear-gradient(112deg, rgba(2, 6, 23, 0.42), transparent 58%);
+}
+
+.ai-real-work-card > div {
+  position: absolute;
+  inset: auto 0 0;
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.ai-real-work-card h3 {
+  max-width: 620px;
+  color: white;
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.ai-real-work-card p {
+  margin-top: 1rem;
+  max-width: 560px;
+  color: rgba(226, 232, 240, 0.82);
+  line-height: 1.75;
+}
+
 .ai-coming-section {
   overflow: hidden;
   background:
@@ -1247,6 +1323,89 @@ html {
   line-height: 1.8;
 }
 
+.contact-locations-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(115deg, transparent 0 63%, rgba(250, 204, 21, 0.12) 63.2%, transparent 64%),
+    linear-gradient(to right, rgba(226, 232, 240, 0.8) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.8) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff, #f8fafc);
+  background-size: auto, 72px 72px, 72px 72px, auto;
+}
+
+.contact-location-card {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  background: #0f172a;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.contact-location-card.is-primary {
+  clip-path: polygon(0 0, 100% 0, 94% 100%, 0 100%);
+}
+
+.contact-location-card.is-secondary {
+  display: grid;
+  min-height: 420px;
+  align-items: end;
+  background:
+    radial-gradient(circle at 72% 20%, rgba(37, 99, 235, 0.24), transparent 34%),
+    #020617;
+}
+
+.contact-location-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 26%, rgba(2, 6, 23, 0.84)),
+    linear-gradient(90deg, rgba(2, 6, 23, 0.46), transparent 70%);
+}
+
+.contact-location-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  background:
+    linear-gradient(118deg, transparent 0 52%, rgba(250, 204, 21, 0.24) 52.3%, transparent 53.4%),
+    linear-gradient(96deg, transparent 0 70%, rgba(56, 189, 248, 0.22) 70.2%, transparent 71%),
+    repeating-linear-gradient(90deg, rgba(148, 163, 184, 0.14) 0 1px, transparent 1px 44px);
+}
+
+.contact-location-card > div:not(.contact-location-pattern) {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+.contact-location-card p {
+  color: #facc15;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.contact-location-card h3 {
+  margin-top: 0.8rem;
+  color: white;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+
+.contact-location-card address {
+  display: block;
+  margin-top: 1rem;
+  color: rgba(226, 232, 240, 0.84);
+  font-style: normal;
+  font-weight: 650;
+  line-height: 1.7;
+}
+
 @keyframes ai-grid-drift {
   from {
     background-position: 0 0, 0 0, center;
@@ -1340,6 +1499,17 @@ html {
   }
   50% {
     margin-top: -16px;
+  }
+}
+
+@keyframes ai-real-work-rise {
+  from {
+    opacity: 0;
+    transform: translateY(78px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 

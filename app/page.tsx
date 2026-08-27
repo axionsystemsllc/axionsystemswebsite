@@ -9,31 +9,31 @@ const services = [
     title: "Hardware Development",
     text: "Embedded electronics, PCB design, board bring-up, integration, and hardware redesign.",
     href: "/axion-electrical",
-    image: "/images/generated/hardware-development-macro.png",
+    image: "/images/real/electronics-debug-bench.png",
   },
   {
     title: "Manufacturing & Design",
     text: "Precision manufacturing support, process-minded design, fixtures, and local iteration.",
     href: "/axion-manufacturing",
-    image: "/images/generated/laser-cutting-metal.png",
+    image: "/images/real/cnc-acrylic-closeup.png",
   },
   {
     title: "Product Development & Prototyping",
     text: "Mechanical concepts, proof-of-concept builds, CAD-to-part workflows, and prototype validation.",
     href: "/axion-manufacturing",
-    image: "/images/generated/product-development-machined.png",
+    image: "/images/real/printer-purple-prototype.png",
   },
   {
     title: "Software & AI",
     text: "Business AI tools, embedded AI, technical software, automation, and decision-support workflows.",
     href: "/axion-ai",
-    image: "/images/generated/software-ai-workbench.png",
+    image: "/images/real/antenna-simulation-bench.png",
   },
   {
     title: "Technical Documentation",
     text: "Build guides, engineering drawings, handoff packages, test notes, and short-term technical support.",
     href: "/services",
-    image: "/images/generated/technical-documentation-drawings.png",
+    image: "/images/real/cam-toolpath.png",
   },
 ];
 
@@ -44,7 +44,7 @@ const divisions = [
     text: "Axion Manufacturing helps customers move from model, drawing, or rough concept to physical prototype with fast iteration, direct updates, and practical design-for-manufacturing input from the people doing the work.",
     href: "/axion-manufacturing",
     cta: "Explore Manufacturing",
-    image: "/images/generated/laser-cutting-metal.png",
+    image: "/images/real/industrial-press.png",
   },
   {
     eyebrow: "Axion AI",
@@ -52,7 +52,7 @@ const divisions = [
     text: "Axion AI builds applied AI systems for business operations and technical products, using modern tools where they genuinely improve automation, embedded intelligence, robotics support, and engineering software.",
     href: "/axion-ai",
     cta: "Explore Axion AI",
-    image: "/images/generated/robotics-automation-cell.png",
+    image: "/images/real/antenna-simulation-bench.png",
   },
   {
     eyebrow: "Axion Electrical",
@@ -60,40 +60,40 @@ const divisions = [
     text: "Axion Electrical supports board design, hardware redesign, wiring, bring-up, troubleshooting, and documentation for products that need reliable electrical execution.",
     href: "/axion-electrical",
     cta: "Explore Electrical",
-    image: "/images/generated/hardware-development-macro.png",
+    image: "/images/real/electronics-debug-bench.png",
   },
 ];
 
 const industries = [
   {
-    title: "Manufacturing Teams",
-    text: "Precision prototyping, fixtures, machining, and fast local iteration.",
-    image: "/images/generated/laser-cutting-metal.png",
+    title: "Aerospace & Defense",
+    text: "Embedded systems, testing, simulation support, technical documentation, and prototype hardware.",
+    image: "/images/real/antenna-simulation-bench.png",
   },
   {
-    title: "Business Operations",
-    text: "AI workflows, dashboards, automation, and technical software support.",
-    image: "/images/services/technical-software-service.jpg",
+    title: "Automotive & Mobility",
+    text: "Manufacturing support, electronics, automation, CAD iteration, and rapid prototype validation.",
+    image: "/images/real/mobility-platform-render.png",
   },
   {
-    title: "Startup Prototypes",
-    text: "Physical proof-of-concept builds that move quickly toward validation.",
-    image: "/images/projects-polished/drone-field-wide.png",
+    title: "Industrial Manufacturing",
+    text: "Fixtures, CNC routing, process support, contracting help, and practical production troubleshooting.",
+    image: "/images/real/industrial-press.png",
   },
   {
-    title: "Industrial Electronics",
-    text: "PCB design, bring-up, redesign, field integration, and documentation.",
-    image: "/images/generated/hardware-development-macro.png",
+    title: "Product Prototyping",
+    text: "PCB, enclosure, mechanical, and software prototypes built for testing, debugging, and handoff.",
+    image: "/images/real/tank-vision-exploded.png",
   },
   {
-    title: "Robotics Projects",
-    text: "Sensor integration, embedded control, automation, and test rigs.",
-    image: "/images/generated/robotics-automation-cell.png",
+    title: "Power & Energy",
+    text: "Monitoring hardware, software support, electronics integration, and field-ready documentation.",
+    image: "/images/real/electronics-debug-bench.png",
   },
   {
-    title: "Energy and Infrastructure",
-    text: "Industrial monitoring, electrical systems, and applied AI operations.",
-    image: "/images/generated/energy-industrial-systems.png",
+    title: "Robotics & Automation",
+    text: "Controls, embedded logic, software support, test rigs, automation tooling, and debug workflows.",
+    image: "/images/real/cnc-acrylic-system.png",
   },
 ];
 
