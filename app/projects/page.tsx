@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: "Tank Vision 2.2 Product Electronics",
+    title: "Custom IoT Product Electronics",
     eyebrow: "Industrial electronics",
-    text: "A field-ready electronics and enclosure package for Tank Vision 2.2, designed for a major petroleum company. The effort included internal board design, Ethernet-facing hardware, enclosure integration, connector access, and product-level packaging.",
+    text: "A field-ready electronics and enclosure package for a custom IoT hardware product in the industrial monitoring space. We aided in the development of the product's internal board design, Ethernet-facing hardware, enclosure integration, connector access, and product-level packaging.",
     hero: "/images/projects-polished/tank-vision-product-spread.png",
     images: [
       "/images/projects-polished/tank-vision-product-spread.png",
@@ -23,7 +23,7 @@ const projects = [
       "/images/projects-polished/tank-vision-layout-lab.png",
       "/images/real-projects/tank-vision-green-board.jpg",
     ],
-    tags: ["Product electronics", "Industrial hardware", "Enclosure integration"],
+    tags: ["Product electronics", "Custom IoT hardware", "Enclosure integration"],
   },
   {
     title: "Drone Design and Prototyping",
@@ -48,17 +48,6 @@ const projects = [
       "/images/real-projects/flight-computer-schematic.jpg",
     ],
     tags: ["Flight computer PCB", "Embedded control", "Sensor interfaces"],
-  },
-  {
-    title: "Engineering Documentation and Schematics",
-    eyebrow: "Design handoff",
-    text: "Technical artifacts that support design review, debugging, manufacturing handoff, and long-term maintainability.",
-    hero: "/images/generated/prototype-documentation-table.png",
-    images: [
-      "/images/generated/prototype-documentation-table.png",
-      "/images/real-projects/flight-computer-schematic.jpg",
-    ],
-    tags: ["Schematics", "Design review", "Manufacturing handoff"],
   },
 ];
 
