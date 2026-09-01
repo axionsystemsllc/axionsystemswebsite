@@ -12,22 +12,22 @@ export const metadata: Metadata = {
 const team = [
   {
     name: "Chancen Dahmer",
-    role: "Director of Axion AI & Embedded Solutions",
+    role: "Director of Business Operations",
     image: "/images/team/chancen-dahmer.png",
   },
   {
     name: "Caden Schlenker",
-    role: "Director of Axion AI & Embedded Solutions",
+    role: "Director of Software & Automation",
     image: "/images/team/caden-schlenker.png",
   },
   {
     name: "Breckin Helfen",
-    role: "Director of Axion Manufacturing",
+    role: "Director of Manufacturing",
     image: "/images/team/breckin-helfen.jpg",
   },
   {
     name: "Davis Dahmer",
-    role: "Director of Axion Electrical",
+    role: "Director of Hardware & Embedded Systems",
     image: "/images/team/davis-dahmer.png",
   },
 ];

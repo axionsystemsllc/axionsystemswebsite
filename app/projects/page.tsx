@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ProjectReveal } from "../components/ProjectReveal";
 import { ProjectSlideshow } from "../components/ProjectSlideshow";
 import { SiteHeader } from "../components/SiteHeader";
+import { projects } from "../data/projects";
 
 export const metadata: Metadata = {
   title: "Projects | Axion Systems",
@@ -11,59 +12,9 @@ export const metadata: Metadata = {
     "A portfolio view of Axion Systems project areas across manufacturing, electrical design, embedded AI, robotics, prototyping, and technical documentation.",
 };
 
-const projects = [
-  {
-    title: "Tank Vision 2.2 Product Electronics",
-    eyebrow: "Industrial electronics",
-    text: "A field-ready electronics and enclosure package for Tank Vision 2.2, designed for a major petroleum company. The effort included internal board design, Ethernet-facing hardware, enclosure integration, connector access, and product-level packaging.",
-    hero: "/images/projects-polished/tank-vision-product-spread.png",
-    images: [
-      "/images/projects-polished/tank-vision-product-spread.png",
-      "/images/projects-polished/tank-vision-pcb-lab.png",
-      "/images/projects-polished/tank-vision-layout-lab.png",
-      "/images/real-projects/tank-vision-green-board.jpg",
-    ],
-    tags: ["Product electronics", "Industrial hardware", "Enclosure integration"],
-  },
-  {
-    title: "Drone Design and Prototyping",
-    eyebrow: "Prototype controls",
-    text: "A scratch-built drone prototype created as a controls and integration test bed. The work centered on custom mechanical design, embedded electronics, power distribution, and early flight-control experimentation.",
-    hero: "/images/projects-polished/drone-field-wide.png",
-    images: [
-      "/images/projects-polished/drone-field-close.png",
-      "/images/projects-polished/drone-field-wide.png",
-      "/images/projects-polished/ground-station-console.png",
-      "/images/projects-polished/ground-station-dashboard.png",
-    ],
-    tags: ["Ground-up prototype", "Control systems", "Mechanical integration"],
-  },
-  {
-    title: "Avionics Flight Computer",
-    eyebrow: "Avionics",
-    text: "A compact flight computer PCB developed for embedded control, sensor interfaces, power regulation, telemetry support, and recovery-oriented system logic.",
-    hero: "/images/real-projects/flight-computer-pcb-bench.png",
-    images: [
-      "/images/real-projects/flight-computer-pcb-bench.png",
-      "/images/real-projects/flight-computer-schematic.jpg",
-    ],
-    tags: ["Flight computer PCB", "Embedded control", "Sensor interfaces"],
-  },
-  {
-    title: "Engineering Documentation and Schematics",
-    eyebrow: "Design handoff",
-    text: "Technical artifacts that support design review, debugging, manufacturing handoff, and long-term maintainability.",
-    hero: "/images/generated/prototype-documentation-table.png",
-    images: [
-      "/images/generated/prototype-documentation-table.png",
-      "/images/real-projects/flight-computer-schematic.jpg",
-    ],
-    tags: ["Schematics", "Design review", "Manufacturing handoff"],
-  },
-];
-
 export default function ProjectsPage() {
   const featured = projects[0];
+  const rest = projects.slice(1);
 
   return (
     <main className="relative isolate min-h-screen overflow-hidden bg-white text-slate-950">
@@ -90,31 +41,37 @@ export default function ProjectsPage() {
           </h1>
           <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-200">
             Real project work, technical artifacts, prototypes, and systems
-            that move the next engineering decision forward.
+            that move the next engineering decision forward. Open a project
+            for the full technical breakdown.
           </p>
         </div>
       </section>
 
       <section className="projects-featured px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-center">
-          <div className="projects-featured-image">
+          <Link
+            className="projects-featured-image group relative block"
+            href={`/projects/${featured.slug}`}
+          >
             <Image
               src={featured.hero}
               alt={featured.title}
               fill
               sizes="(max-width: 1024px) 100vw, 58vw"
-              className="object-cover"
+              className="object-cover transition duration-700 group-hover:scale-[1.03]"
             />
-          </div>
+          </Link>
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
               Featured project
             </p>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              {featured.title}
+              <Link className="transition hover:text-blue-700" href={`/projects/${featured.slug}`}>
+                {featured.title}
+              </Link>
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-600">
-              {featured.text}
+              {featured.summary}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {featured.tags.map((tag) => (
@@ -123,30 +80,41 @@ export default function ProjectsPage() {
                 </span>
               ))}
             </div>
+            <Link
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
+              href={`/projects/${featured.slug}`}
+            >
+              View full case study
+              <span aria-hidden>›</span>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="projects-list px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12">
-          {projects.map((project, index) => {
+          {rest.map((project, index) => {
             const reverse = index % 2 === 1;
 
             return (
               <ProjectReveal
                 className={`project-case-row ${reverse ? "is-reverse" : ""}`}
                 direction={reverse ? "right" : "left"}
-                key={project.title}
+                key={project.slug}
               >
                 <div className="project-case-media">
                   <ProjectSlideshow images={project.images} title={project.title} />
                 </div>
                 <div className="project-case-copy">
                   <p>
-                    {String(index + 1).padStart(2, "0")} / {project.eyebrow}
+                    {String(index + 2).padStart(2, "0")} / {project.eyebrow}
                   </p>
-                  <h2>{project.title}</h2>
-                  <span>{project.text}</span>
+                  <h2>
+                    <Link className="transition hover:text-blue-400" href={`/projects/${project.slug}`}>
+                      {project.title}
+                    </Link>
+                  </h2>
+                  <span>{project.summary}</span>
                   <div>
                     {project.tags.map((tag) => (
                       <span className="project-tag" key={tag}>
@@ -154,6 +122,13 @@ export default function ProjectsPage() {
                       </span>
                     ))}
                   </div>
+                  <Link
+                    className="project-detail-link"
+                    href={`/projects/${project.slug}`}
+                  >
+                    View full case study
+                    <span aria-hidden>›</span>
+                  </Link>
                 </div>
               </ProjectReveal>
             );
