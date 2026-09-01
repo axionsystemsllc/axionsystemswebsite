@@ -1406,6 +1406,190 @@ html {
   line-height: 1.7;
 }
 
+.locations-hero {
+  min-height: 680px;
+  background: #020617;
+}
+
+.locations-hero > div:first-child img {
+  animation: hero-pan 22s ease-in-out infinite alternate;
+}
+
+.locations-hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+  opacity: 0.42;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(116deg, transparent 0 70%, rgba(250, 204, 21, 0.18) 70.2%, transparent 70.8%);
+  background-size: 88px 88px, 88px 88px, auto;
+  mask-image: linear-gradient(90deg, #000, transparent 78%);
+}
+
+.locations-intro {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(112deg, transparent 0 72%, rgba(250, 204, 21, 0.14) 72.2%, transparent 72.9%),
+    linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.locations-photo-grid {
+  display: grid;
+  min-height: 620px;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.62fr);
+  gap: 16px;
+}
+
+.locations-photo-main,
+.locations-photo-side {
+  position: relative;
+  overflow: hidden;
+  background: #e2e8f0;
+  box-shadow: 0 24px 76px rgba(6, 22, 43, 0.15);
+}
+
+.locations-photo-main {
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+}
+
+.locations-photo-side {
+  margin-block: 72px;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.locations-photo-main::after,
+.locations-photo-side::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 62%, rgba(2, 6, 23, 0.82));
+}
+
+.locations-photo-main span,
+.locations-photo-side span {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  padding: 24px;
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.locations-secondary {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(37, 99, 235, 0.22), transparent 28%),
+    linear-gradient(135deg, #020617 0%, #06162b 70%, #020617 100%);
+}
+
+.locations-secondary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(112deg, transparent 0 72%, rgba(250, 204, 21, 0.28) 72.2%, transparent 72.8%);
+  background-size: 82px 82px, 82px 82px, auto;
+}
+
+.locations-secondary-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.07);
+  padding: clamp(1.75rem, 5vw, 3.25rem);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.26);
+}
+
+.locations-secondary-card::after {
+  content: "";
+  position: absolute;
+  right: -22%;
+  top: -30%;
+  height: 150%;
+  width: 48%;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.15), transparent 60%);
+  transform: skewX(-18deg);
+}
+
+.locations-secondary-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.locations-secondary-card > span {
+  color: #facc15;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.locations-secondary-card strong {
+  display: block;
+  margin-top: 18px;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.locations-secondary-card p {
+  margin-top: 18px;
+  color: rgba(226, 232, 240, 0.76);
+}
+
+.locations-secondary-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  text-underline-offset: 5px;
+}
+
+.locations-cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(37, 99, 235, 0.22), transparent 28%),
+    linear-gradient(135deg, #06162b 0%, #020617 74%);
+  box-shadow: 0 28px 90px rgba(6, 22, 43, 0.16);
+}
+
+.locations-cta::after {
+  content: "";
+  position: absolute;
+  right: -10%;
+  top: 0;
+  height: 100%;
+  width: 34%;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  transform: skewX(-18deg);
+}
+
+.locations-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
 @keyframes ai-grid-drift {
   from {
     background-position: 0 0, 0 0, center;
@@ -2609,6 +2793,22 @@ html {
 }
 
 @media (max-width: 1024px) {
+  .locations-photo-grid {
+    min-height: auto;
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .locations-photo-main,
+  .locations-photo-side {
+    min-height: 480px;
+    clip-path: none;
+    border-radius: 16px;
+  }
+
+  .locations-photo-side {
+    margin-block: 0;
+  }
+
   .process-crop-frame,
   .branch-image-frame,
   .division-hero-image,
@@ -2680,6 +2880,33 @@ html {
 }
 
 @media (max-width: 640px) {
+  .locations-hero {
+    min-height: 620px;
+  }
+
+  .locations-hero > div:first-child img {
+    animation: none;
+    transform: scale(1.02);
+  }
+
+  .locations-hero-grid {
+    background-size: 58px 58px, 58px 58px, auto;
+  }
+
+  .locations-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locations-photo-main,
+  .locations-photo-side {
+    min-height: 360px;
+  }
+
+  .locations-secondary-card,
+  .locations-cta {
+    padding: 1.5rem;
+  }
+
   section[class*="py-20"],
   section[class*="py-16"] {
     padding-top: 3.5rem;

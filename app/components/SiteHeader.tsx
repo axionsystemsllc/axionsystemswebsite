@@ -23,6 +23,7 @@ const navItems: NavItem[] = [
   },
   { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
+  { label: "Locations", href: "/locations" },
   { label: "Projects", href: "/projects" },
 ];
 

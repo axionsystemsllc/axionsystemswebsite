@@ -27,13 +27,13 @@ const services = [
     title: "Software & AI",
     text: "Business AI tools, embedded AI, technical software, automation, and decision-support workflows.",
     href: "/axion-ai",
-    image: "/images/real/antenna-simulation-bench.png",
+    image: "/images/generated/software-ai-workbench.png",
   },
   {
     title: "Technical Documentation",
     text: "Build guides, engineering drawings, handoff packages, test notes, and short-term technical support.",
     href: "/services",
-    image: "/images/real/cam-toolpath.png",
+    image: "/images/generated/technical-documentation-drawings.png",
   },
 ];
 
@@ -52,7 +52,7 @@ const divisions = [
     text: "Axion AI builds applied AI systems for business operations and technical products, using modern tools where they genuinely improve automation, embedded intelligence, robotics support, and engineering software.",
     href: "/axion-ai",
     cta: "Explore Axion AI",
-    image: "/images/real/antenna-simulation-bench.png",
+    image: "/images/generated/office-ai-workflow.png",
   },
   {
     eyebrow: "Axion Electrical",
@@ -60,7 +60,7 @@ const divisions = [
     text: "Axion Electrical supports board design, hardware redesign, wiring, bring-up, troubleshooting, and documentation for products that need reliable electrical execution.",
     href: "/axion-electrical",
     cta: "Explore Electrical",
-    image: "/images/real/electronics-debug-bench.png",
+    image: "/images/generated/hardware-development-macro.png",
   },
 ];
 
@@ -68,7 +68,7 @@ const industries = [
   {
     title: "Aerospace & Defense",
     text: "Embedded systems, testing, simulation support, technical documentation, and prototype hardware.",
-    image: "/images/real/antenna-simulation-bench.png",
+    image: "/images/real/aerospace-drone-enhanced.png",
   },
   {
     title: "Automotive & Mobility",
@@ -78,7 +78,7 @@ const industries = [
   {
     title: "Industrial Manufacturing",
     text: "Fixtures, CNC routing, process support, contracting help, and practical production troubleshooting.",
-    image: "/images/real/industrial-press.png",
+    image: "/images/generated/shop-cnc-router.png",
   },
   {
     title: "Product Prototyping",
@@ -88,12 +88,12 @@ const industries = [
   {
     title: "Power & Energy",
     text: "Monitoring hardware, software support, electronics integration, and field-ready documentation.",
-    image: "/images/real/electronics-debug-bench.png",
+    image: "/images/generated/energy-industrial-systems.png",
   },
   {
     title: "Robotics & Automation",
     text: "Controls, embedded logic, software support, test rigs, automation tooling, and debug workflows.",
-    image: "/images/real/cnc-acrylic-system.png",
+    image: "/images/generated/robotics-cell-alt.png",
   },
 ];
 

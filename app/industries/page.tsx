@@ -13,32 +13,32 @@ const industries = [
   {
     title: "Aerospace & Defense",
     text: "Embedded systems, simulation support, test documentation, prototype electronics, and practical debugging for technical programs.",
-    image: "/images/generated/hero-drone-facility.png",
+    image: "/images/real/aerospace-drone-enhanced.png",
   },
   {
     title: "Automotive & Mobility",
     text: "Manufacturing support, electronics and automation, CAD iteration, hardware prototypes, and fast validation loops.",
-    image: "/images/generated/product-development-machined.png",
+    image: "/images/real/mobility-platform-render.png",
   },
   {
     title: "Industrial Manufacturing",
     text: "Fixture work, CNC routing, short-run planning, process support, engineering contracting, and shop-floor problem solving.",
-    image: "/images/generated/manufacturing-cnc.png",
+    image: "/images/real/industrial-press.png",
   },
   {
     title: "Product Prototyping",
     text: "Concept models, PCB and enclosure prototypes, 3D printed parts, testing, debugging, and build-ready handoff packages.",
-    image: "/images/generated/desktop-3d-printing-prototype.png",
+    image: "/images/real/tank-vision-exploded.png",
   },
   {
     title: "Power & Energy",
     text: "Monitoring hardware, field documentation, embedded software, electrical integration, and AI-supported operations.",
-    image: "/images/generated/energy-industrial-systems.png",
+    image: "/images/real/electronics-debug-bench.png",
   },
   {
     title: "Robotics & Automation",
     text: "Controls, embedded logic, software support, automation tooling, test rigs, and hardware-aware debugging.",
-    image: "/images/generated/robotics-automation-cell.png",
+    image: "/images/real/cnc-acrylic-system.png",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function IndustriesPage() {
 
       <section className="relative isolate overflow-hidden bg-slate-950 px-5 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
         <Image
-          src="/images/generated/hero-drone-facility.png"
+          src="/images/real/industrial-press.png"
           alt="Axion technical work across industries"
           fill
           priority

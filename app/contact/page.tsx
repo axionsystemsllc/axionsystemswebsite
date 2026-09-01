@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { SiteHeader } from "../components/SiteHeader";
 import { ContactForm } from "./ContactForm";
 
@@ -86,6 +87,16 @@ export default function ContactPage() {
                 <address>Engineering and project support location</address>
               </div>
             </article>
+          </div>
+
+          <div className="mt-8 flex justify-end">
+            <Link
+              className="inline-flex items-center gap-3 rounded-lg bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-blue-700"
+              href="/locations"
+            >
+              Explore our locations
+              <span aria-hidden>›</span>
+            </Link>
           </div>
         </div>
       </section>

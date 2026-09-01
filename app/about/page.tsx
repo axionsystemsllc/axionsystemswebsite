@@ -234,11 +234,11 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.78fr] lg:items-center">
           <div className="about-origin-visual scroll-reveal">
             <Image
-              src="/images/real/electronics-debug-bench.png"
-              alt="Electronics prototyping bench"
+              src="/images/real/manufacturing-parts-wall.png"
+              alt="Manufactured automotive components displayed in a Michigan workshop"
               fill
               sizes="(max-width: 1024px) 100vw, 52vw"
-              className="object-cover"
+              className="object-cover object-[center_58%]"
             />
           </div>
           <div className="scroll-reveal">
