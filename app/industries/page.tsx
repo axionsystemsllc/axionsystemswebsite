@@ -33,12 +33,12 @@ const industries = [
   {
     title: "Power & Energy",
     text: "Monitoring hardware, field documentation, embedded software, electrical integration, and AI-supported operations.",
-    image: "/images/real/electronics-debug-bench.png",
+    image: "/images/generated/energy-industrial-systems.png",
   },
   {
     title: "Robotics & Automation",
     text: "Controls, embedded logic, software support, automation tooling, test rigs, and hardware-aware debugging.",
-    image: "/images/real/cnc-acrylic-system.png",
+    image: "/images/generated/prototype-robotics-bench.png",
   },
 ];
 

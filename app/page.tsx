@@ -44,7 +44,7 @@ const divisions = [
     text: "Axion Manufacturing helps customers move from model, drawing, or rough concept to physical prototype with fast iteration, direct updates, and practical design-for-manufacturing input from the people doing the work.",
     href: "/axion-manufacturing",
     cta: "Explore Manufacturing",
-    image: "/images/real/industrial-press.png",
+    image: "/images/real/cam-toolpath.png",
   },
   {
     eyebrow: "Axion AI",

@@ -39,7 +39,7 @@ const serviceSlides = [
     title: "Technical Documentation",
     text: "Build guides, schematics, handoff packages, test notes, and engineering documentation.",
     href: "/services",
-    image: "/images/real/cam-toolpath.png",
+    image: "/images/generated/documentation-review-alt.png",
   },
 ];
 
@@ -53,13 +53,13 @@ const divisions = [
   {
     title: "Axion Electrical",
     href: "/axion-electrical",
-    image: "/images/real/electronics-debug-bench.png",
+    image: "/images/generated/wiring_harness.png",
     text: "PCB design, hardware redesign, board bring-up, wiring, integration, and troubleshooting.",
   },
   {
     title: "Axion AI",
     href: "/axion-ai",
-    image: "/images/real/antenna-simulation-bench.png",
+    image: "/images/generated/software-ai-workbench.png",
     text: "Business AI, embedded AI, robotics support, workflow automation, and engineering tools.",
   },
 ];
