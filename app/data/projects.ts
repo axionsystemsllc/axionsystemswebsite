@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "Industrial Product Electronics",
     summary:
       "A field-ready electronics and enclosure package built to support a local oil distribution company's monitoring hardware, with Axion aiding in the development of production-grade hardware.",
-    hero: "/images/projects-polished/tank-vision-product-spread.png",
+    hero: "/images/real/tank-vision-enclosures.png",
     images: [
       "/images/real/pcb-render.png",
       "/images/projects-polished/tank-vision-layout-lab.png",
