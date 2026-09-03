@@ -25,9 +25,9 @@ export const projects: Project[] = [
       "A field-ready electronics and enclosure package built to support a local oil distribution company's monitoring hardware, with Axion aiding in the development of production-grade hardware.",
     hero: "/images/projects-polished/tank-vision-product-spread.png",
     images: [
-      "/images/projects-polished/tank-vision-pcb-lab.png",
+      "/images/real/pcb-render.png",
       "/images/projects-polished/tank-vision-layout-lab.png",
-      "/images/projects-polished/industrial-electronics-internal-hardware.png",
+      "/images/real-projects/TAMV1.3.jpg",
     ],
     tags: ["Product electronics", "Industrial hardware", "Enclosure integration"],
     overview: [
@@ -95,6 +95,8 @@ export const projects: Project[] = [
     hero: "/images/projects-polished/ground-station-console.png",
     images: [
       "/images/projects-polished/ground-station-dashboard.png",
+      "/images/real-projects/ground-station-cad.jpg",
+      "/images/real-projects/groundstation.jpg",
     ],
     tags: ["Prototype", "RF telemetry", "Dashboard software"],
     overview: [

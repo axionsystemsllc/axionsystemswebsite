@@ -22,7 +22,7 @@ export default function ProjectsPage() {
 
       <section className="projects-hero relative isolate overflow-hidden px-5 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
         <Image
-          src="/images/projects-polished/ground-station-console.png"
+          src="/images/real-projects/groundstation_frontend.jpg"
           alt="Axion rugged ground station project"
           fill
           priority

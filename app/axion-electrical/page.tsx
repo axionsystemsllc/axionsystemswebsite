@@ -27,12 +27,12 @@ export default function AxionElectricalPage() {
         {
           title: "Flight computer PCB",
           text: "Compact embedded electronics with sensor interfaces, power regulation, telemetry support, and review-ready schematic artifacts.",
-          image: "/images/real/tank-vision-pcb.png",
+          image: "/images/drone-controls.png",
         },
         {
           title: "Industrial product electronics",
           text: "Board-level design, Ethernet-facing hardware, connector access, and enclosure-aware electronics packaging.",
-          image: "/images/real/tank-vision-exploded.png",
+          image: "/images/pcb-redesign.png",
         },
         {
           title: "Schematic and hardware review",

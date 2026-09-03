@@ -28,7 +28,7 @@ const industries = [
   {
     title: "Product Prototyping",
     text: "Concept models, PCB and enclosure prototypes, 3D printed parts, testing, debugging, and build-ready handoff packages.",
-    image: "/images/real/tank-vision-exploded.png",
+    image: "/images/real-projects/Electrical_enclosure_CAD.png",
   },
   {
     title: "Power & Energy",
