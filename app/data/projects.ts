@@ -121,38 +121,6 @@ export const projects: Project[] = [
       { label: "Status", value: "Prototype" },
     ],
   },
-  {
-    slug: "ultrasonic-ir-targeting-system",
-    eyebrow: "Sensor tracking",
-    title: "Ultrasonic and IR Targeting System",
-    summary:
-      "A pan-tilt sensor turret with a fully 3D-modeled and 3D-printed frame, using an IR sensor and multiple ultrasonic sensors to detect and track the movement of individuals.",
-    hero: "/images/projects-polished/ultrasonic-ir-targeting-turret.png",
-    images: [
-      "/images/projects-polished/ultrasonic-ir-targeting-turret.png",
-    ],
-    tags: ["Prototype", "Sensor fusion", "3D printed"],
-    overview: [
-      "The frame is fully 3D-modeled and 3D-printed, housing a two-axis pan-tilt mechanism built around a custom MCU-based control board. An IR sensor combined with multiple ultrasonic sensors gives the system overlapping proximity and motion data, which the onboard controller uses to detect and track the movement of individuals within its field of view.",
-      "The control board follows the same custom-PCB approach used elsewhere at Axion: an MCU handling sensor polling, signal filtering, and pan-tilt actuation, with tracking logic converting raw ultrasonic and IR readings into a target heading the turret can follow in real time.",
-    ],
-    capabilities: [
-      "Two-axis pan-tilt mechanical design",
-      "Full 3D CAD modeling and 3D-printed frame fabrication",
-      "IR sensor integration for proximity and motion sensing",
-      "Multi-sensor ultrasonic array integration for spatial detection",
-      "Custom MCU-based control board for sensor polling and actuation",
-      "Real-time sensor fusion for target detection and tracking",
-      "Servo/motor drive control for pan-tilt actuation",
-    ],
-    specs: [
-      { label: "Frame", value: "Fully 3D-modeled and 3D-printed pan-tilt housing" },
-      { label: "Sensing", value: "IR sensor + multiple ultrasonic sensors" },
-      { label: "Control", value: "Custom MCU-based PCB controller" },
-      { label: "Function", value: "Detects and tracks movement of individuals" },
-      { label: "Status", value: "Prototype" },
-    ],
-  },
 ];
 
 export function getProjectBySlug(slug: string) {

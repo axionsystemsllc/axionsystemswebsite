@@ -7,7 +7,7 @@ import { SiteHeader } from "../components/SiteHeader";
 export const metadata: Metadata = {
   title: "Axion AI | Axion Systems",
   description:
-    "Business AI solutions, embedded AI systems, robotics, intelligent software, and Enginuity Workspace from Axion AI.",
+    "Business AI solutions, embedded AI systems, robotics, and intelligent software from Axion AI.",
 };
 
 const heroSignals = [
@@ -260,47 +260,6 @@ export default function AxionAIPage() {
               to real operations: embedded devices, lab systems, robotics,
               documentation, dashboards, or daily business workflows.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="ai-coming-section ai-product-reveal relative z-10 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div aria-hidden className="ai-coming-orb" />
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1fr] lg:items-center">
-          <div className="ai-coming-logo ai-product-card">
-            <Image
-              src="/images/enginuity-workspace-logo.png"
-              alt="Enginuity Workspace logo"
-              width={240}
-              height={240}
-              className="h-auto w-full"
-            />
-          </div>
-          <div className="ai-coming-copy">
-            <p className="ai-coming-eyebrow">
-              Coming soon
-            </p>
-            <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              Enginuity Workspace
-            </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              An educational AI teaching assistant for STEM laboratory classes
-              in higher education, built to help students work through
-              experiments, technical concepts, documentation, and lab workflows
-              with guided support.
-            </p>
-            <div className="ai-coming-tags mt-7 flex flex-wrap gap-2">
-              {[
-                "STEM labs",
-                "Higher education",
-                "AI teaching assistant",
-                "Guided technical learning",
-              ].map((tag) => (
-                <span className="ai-coming-tag" key={tag}>
-                  {tag}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </section>
