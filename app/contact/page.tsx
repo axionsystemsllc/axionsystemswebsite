@@ -34,8 +34,8 @@ export default function ContactPage() {
             </p>
             <p className="mt-8 text-sm font-medium text-slate-600">
               Direct email:{" "}
-              <a className="text-blue-700" href="mailto:chancen@axionsystems.us">
-                chancen@axionsystems.us
+              <a className="text-blue-700" href="mailto:axion.eng@axionsystems.us">
+                axion.eng@axionsystems.us
               </a>
             </p>
           </div>

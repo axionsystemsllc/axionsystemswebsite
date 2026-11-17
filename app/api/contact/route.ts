@@ -1,4 +1,4 @@
-const contactEmail = "chancen@axionsystems.us";
+const contactEmail = "axion.eng@axionsystems.us";
 
 type ContactPayload = {
   company?: string;
@@ -85,7 +85,7 @@ export async function POST(request: Request) {
     return Response.json(
       {
         error:
-          "Contact email is not configured yet. Please email chancen@axionsystems.us directly.",
+          `Contact email is not configured yet. Please email ${contactEmail} directly.`,
       },
       { status: 503 },
     );
@@ -147,7 +147,7 @@ export async function POST(request: Request) {
       {
         details: resendError,
         error:
-          "The message could not be sent. Please email chancen@axionsystems.us directly.",
+          `The message could not be sent. Please email ${contactEmail} directly.`,
         status: response.status,
       },
       { status: 502 },

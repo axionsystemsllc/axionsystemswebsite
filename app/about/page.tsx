@@ -9,29 +9,6 @@ export const metadata: Metadata = {
     "Learn how Axion Systems helps manufacturers, product companies, and engineering teams turn technical ideas and unresolved problems into practical solutions.",
 };
 
-const team = [
-  {
-    name: "Chancen Dahmer",
-    role: "Director of Business Operations",
-    image: "/images/team/chancen-dahmer.png",
-  },
-  {
-    name: "Caden Schlenker",
-    role: "Director of Software & Automation",
-    image: "/images/team/caden-schlenker.png",
-  },
-  {
-    name: "Breckin Helfen",
-    role: "Director of Manufacturing",
-    image: "/images/team/breckin-helfen.jpg",
-  },
-  {
-    name: "Davis Dahmer",
-    role: "Director of Hardware & Embedded Systems",
-    image: "/images/team/davis-dahmer.png",
-  },
-];
-
 type PillarIconType =
   | "agility"
   | "execution"
@@ -353,46 +330,6 @@ export default function AboutPage() {
               <article className="about-belief-card scroll-reveal" key={belief}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <p>{belief}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="about-team-section px-5 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 grid gap-6 lg:grid-cols-[0.76fr_1fr] lg:items-end">
-            <div className="scroll-reveal">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-yellow-300">
-                Leadership
-              </p>
-              <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-                The people closest to the work.
-              </h2>
-            </div>
-            <p className="max-w-2xl text-base leading-8 text-slate-300 lg:ml-auto">
-              Axion is organized around hands-on delivery, direct technical
-              ownership, and short communication paths.
-            </p>
-          </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, index) => (
-              <article className="about-team-card scroll-reveal" key={member.name}>
-                <div className="about-team-image">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={320}
-                    height={320}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <p className="font-mono text-xs text-yellow-300">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
               </article>
             ))}
           </div>
